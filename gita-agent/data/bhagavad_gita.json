@@ -1,0 +1,1252 @@
+{
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Arjuna Vishada Yoga",
+      "chapter_name_hindi": "अर्जुन विषाद योग",
+      "chapter_summary": "Arjuna's grief and confusion overwhelm him as he observes his relatives and teachers in the opposing army. His crisis of conscience sets the stage for Krishna's teachings.",
+      "verses": [
+        {
+          "verse_number": 1,
+          "sanskrit": "धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः।",
+          "transliteration": "dharmakṣetre kurukṣetre samavetā yuyutsavah",
+          "hindi_translation": "धर्म की भूमि कुरुक्षेत्र में, युद्ध के लिए तत्पर होकर, मेरे सैनिक और पाण्डव क्या करने लगे?",
+          "english_translation": "On the sacred field of Kurukshetra, having gathered with the intention to fight, what did my people and the Pandavas do?",
+          "commentary": "Opening verse establishing the setting and beginning of the Bhagavad Gita narrative."
+        },
+        {
+          "verse_number": 21,
+          "sanskrit": "अर्जुन उवाच। सेनयोरुभयोर्मध्ये रथं स्थापय मे अच्युत।",
+          "transliteration": "arjuna uvācha senyor ubhayor madhye rathaṁ sthāpaya me achyuta",
+          "hindi_translation": "अर्जुन ने कहा: हे अच्युत! दोनों सेनाओं के बीच मेरे रथ को खड़ा करो।",
+          "english_translation": "Arjuna said: O Krishna! Place my chariot between both armies.",
+          "commentary": "Arjuna's request to survey the opposing forces, beginning his crisis."
+        },
+        {
+          "verse_number": 37,
+          "sanskrit": "न काङ्क्षे विजयं कृष्ण न च राज्यं सुखानि च।",
+          "transliteration": "na kāṅkṣe vijayaṁ kṛṣṇa na cha rājyaṁ sukhāni cha",
+          "hindi_translation": "हे कृष्ण! मैं विजय, राज्य और सुखों की कामना नहीं करता।",
+          "english_translation": "O Krishna! I do not desire victory, kingdom, or pleasures.",
+          "commentary": "Arjuna's declaration of renunciation, showing his ethical depth."
+        },
+        {
+          "verse_number": 39,
+          "sanskrit": "आचार्याः पितरः पुत्रास्तथैव च पितामहाः।",
+          "transliteration": "āchāryāḥ pitaraḥ putrās tathāiva cha pitāmahāḥ",
+          "hindi_translation": "आचार्य, पिता, पुत्र, दादा, मामा - ये सभी मेरे संबंधी हैं।",
+          "english_translation": "Teachers, fathers, sons, grandfathers - all my relations are here.",
+          "commentary": "Arjuna enumerates his relationships with those on the opposite side."
+        },
+        {
+          "verse_number": 40,
+          "sanskrit": "न हन्तुमिच्छामि घ्नतोऽपि मधुसूदन।",
+          "transliteration": "na hantum ichchhāmi ghnato 'pi madhusūdan",
+          "hindi_translation": "हे मधुसूदन! मैं इन्हें न मारना चाहता हूँ, भले ही ये मुझे मार दें।",
+          "english_translation": "O Madhusudana! I do not wish to kill them, even if they kill me.",
+          "commentary": "Arjuna's core ethical objection to participating in the war."
+        },
+        {
+          "verse_number": 41,
+          "sanskrit": "निहत्य धार्तराष्ट्रान्नः का प्रीतिः स्यात्जनार्दन।",
+          "transliteration": "nihatya dhārtarāṣṭrān naḥ kā prītiḥ syāt janārdana",
+          "hindi_translation": "हे जनार्दन! धृतराष्ट्र के पुत्रों को मारकर हमें क्या खुशी मिलेगी?",
+          "english_translation": "O Janardana! What joy can we have in slaying the sons of Dhritarashtra?",
+          "commentary": "Arjuna questions the justification for the war from a karmic perspective."
+        },
+        {
+          "verse_number": 45,
+          "sanskrit": "कथं भीष्ममहं संख्ये द्रोणं च मधुसूदन।",
+          "transliteration": "kathaṁ bhīṣmam ahaṁ saṅkhye droṇaṁ cha madhusūdan",
+          "hindi_translation": "हे मधुसूदन! मैं युद्ध में भीष्म और द्रोण को कैसे मार सकता हूँ?",
+          "english_translation": "O Madhusudana! How can I fight Bhishma and Drona in battle?",
+          "commentary": "Arjuna's respect for his elders and teachers prevents him from fighting."
+        },
+        {
+          "verse_number": 46,
+          "sanskrit": "गुरूनहत्वा हि महानुभवान्श्रेयो भोक्तुं भैक्ष्यमिहलोके।",
+          "transliteration": "gurūn ahatvā hi mahānubhavān śreyo bhoktuṁ bhaikṣyam iha loke",
+          "hindi_translation": "इस लोक में महान गुरुओं को न मारकर भीख माँग कर खाना ही अच्छा है।",
+          "english_translation": "It is better to eat alms than to enjoy pleasures stained with the blood of elders.",
+          "commentary": "Arjuna expresses his moral preference for poverty over killing his gurus."
+        },
+        {
+          "verse_number": 47,
+          "sanskrit": "न चैव ज्ञायते कतरन्नो गरीयो यदि वा जयेम।",
+          "transliteration": "na chaiva jñāyate karan no garīyo yadi vā jayem",
+          "hindi_translation": "मैं यह नहीं जानता कि हमारी जीत अच्छी है या हार।",
+          "english_translation": "I do not know what is better for us - victory or defeat.",
+          "commentary": "Arjuna's complete confusion and moral paralysis at this point."
+        },
+        {
+          "verse_number": 48,
+          "sanskrit": "कार्पण्यदोषोपहतस्वभावः पृच्छामि त्वां धर्मसंमूढचेताः।",
+          "transliteration": "kārpanya-doṣopahata-svabhāvaḥ pṛchhāmi tvāṁ dharma-sammūḍha-chetāḥ",
+          "hindi_translation": "दोषपूर्ण हृदय से, मैं तुमसे पूछता हूँ, धर्म में भ्रमित मन के साथ।",
+          "english_translation": "Weakened by cowardice, my mind bewildered about dharma, I ask you for guidance.",
+          "commentary": "Arjuna's final confession of his state of confusion before falling silent."
+        }
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Sankhya Yoga",
+      "chapter_name_hindi": "सांख्य योग",
+      "chapter_summary": "Krishna teaches the philosophy of the eternal soul, the concept of dharma, yoga, and nishkama karma. This is considered the most important chapter containing fundamental teachings.",
+      "verses": [
+        {
+          "verse_number": 2,
+          "sanskrit": "श्रीभगवानुवाच। कुतस्त्वा कश्मलमिदं विषमे समुपस्थितम्।",
+          "transliteration": "śrī bhagavān uvācha kutas tvā kaśmalam idaṁ viṣame samupasthitam",
+          "hindi_translation": "श्रीभगवान ने कहा: हे अर्जुन! इस समय तुम्हें यह कमजोरी कहाँ से आई?",
+          "english_translation": "The Blessed Lord said: From where has this delusion come to you in this critical moment?",
+          "commentary": "Krishna begins his response to Arjuna's crisis with a direct challenge."
+        },
+        {
+          "verse_number": 3,
+          "sanskrit": "क्लैब्यं मा स्म गमः पार्थ नैतत्त्वय्युपपद्यते।",
+          "transliteration": "klaibyaṁ mā sma gamaḥ pārtha naitat tvayy upapadyate",
+          "hindi_translation": "हे पार्थ! नपुंसकता को मत प्राप्त हो। तुम्हारे लिए यह उचित नहीं है।",
+          "english_translation": "Do not yield to cowardice, O Partha! This does not befit you.",
+          "commentary": "Krishna urges Arjuna to overcome his emotional weakness and stand up to his duty."
+        },
+        {
+          "verse_number": 11,
+          "sanskrit": "अशोच्यानन्वशोचस्त्वं प्रज्ञावादांश्च भाषसे।",
+          "transliteration": "aśochyān anvaśocas tvaṁ prajñā-vādāṁś cha bhāṣase",
+          "hindi_translation": "तुम जिन्हें शोक योग्य नहीं हैं, उनके लिए शोक कर रहे हो।",
+          "english_translation": "You grieve for those who should not be mourned and speak words of wisdom.",
+          "commentary": "Krishna points out Arjuna's logical inconsistency in his grief."
+        },
+        {
+          "verse_number": 12,
+          "sanskrit": "न त्वेवाहं जातु नासं न त्वं नेमे जनाधिपाः।",
+          "transliteration": "na tv evāhaṁ jātu nāsaṁ na tvaṁ neme janādhipāḥ",
+          "hindi_translation": "न तो मैं कभी नहीं था, न तुम कभी नहीं थे, न ये राजा लोग कभी नहीं थे।",
+          "english_translation": "Never was there a time when I did not exist, nor you, nor all these kings.",
+          "commentary": "Fundamental teaching on the eternity of the soul - the foundation of all subsequent teachings."
+        },
+        {
+          "verse_number": 13,
+          "sanskrit": "देहिनोऽस्मिन्यथा देहे कौमारं यौवनं जरा।",
+          "transliteration": "dehino 'smin yathā dehe kaumāraṁ yauvanam jarā",
+          "hindi_translation": "जैसे इस शरीर में आत्मा बचपन, यौवन और बुढ़ापे से गुजरता है।",
+          "english_translation": "As the embodied soul passes through childhood, youth, and old age in this body.",
+          "commentary": "The metaphor of the soul's journey through different life stages, illustrating the concept of reincarnation."
+        },
+        {
+          "verse_number": 14,
+          "sanskrit": "मात्रास्पर्शास्तु कौन्तेय शीतोष्णसुखदुःखदाः।",
+          "transliteration": "mātrāspraśās tu kauntey śītoṣṇa-sukha-duḥkha-dāḥ",
+          "hindi_translation": "हे कुंती के पुत्र! इंद्रियों के विषय सर्दी-गर्मी और सुख-दुःख को देते हैं।",
+          "english_translation": "O son of Kunti! The contacts of the senses with their objects cause sensations of heat and cold, pleasure and pain.",
+          "commentary": "Teaching on the transient nature of sensory experiences and the need for equanimity."
+        },
+        {
+          "verse_number": 15,
+          "sanskrit": "यं हि न व्यथयन्त्येते पुरुषं पुरुषर्षभ।",
+          "transliteration": "yaṁ hi na vyathayantyas te puruṣaṁ purusarṣabha",
+          "hindi_translation": "हे पुरुषश्रेष्ठ! जिस पुरुष को ये व्यथित नहीं करते, वह मोक्ष के योग्य है।",
+          "english_translation": "O bull among men! The person whom these sensations do not disturb is fit for immortality.",
+          "commentary": "The ideal of equanimity (samatva) - remaining unaffected by dualities of pleasure and pain."
+        },
+        {
+          "verse_number": 16,
+          "sanskrit": "नासतो विद्यते भावो नाभावो विद्यते सतः।",
+          "transliteration": "nāsato vidyate bhāvo nābhāvo vidyate sataḥ",
+          "hindi_translation": "असत् का कोई भाव नहीं है और सत् का कोई अभाव नहीं है।",
+          "english_translation": "The unreal has no existence; the real never ceases to be.",
+          "commentary": "The fundamental principle distinguishing the eternal Brahman from the temporary material world."
+        },
+        {
+          "verse_number": 17,
+          "sanskrit": "अविनाशि तु तद्वेद्धि येन सर्वमिदं ततम्।",
+          "transliteration": "avināśi tu tad veddhi yen sarvam idaṁ tatam",
+          "hindi_translation": "जान कि वह अविनाशी है, जिससे यह सब कुछ व्याप्त है।",
+          "english_translation": "Know that which pervades the entire body is indestructible.",
+          "commentary": "The Atman is the indestructible essence pervading all existence."
+        },
+        {
+          "verse_number": 18,
+          "sanskrit": "अन्तवन्त इमे देहा नित्यस्योक्ताः शरीरिणः।",
+          "transliteration": "antavanta ime dehā nityasyoktāḥ śarīriṇaḥ",
+          "hindi_translation": "ये सब शरीर क्षणभंगुर हैं, किंतु जिसमें ये शरीर हैं वह नित्य है।",
+          "english_translation": "These bodies are said to end, but He who dwells in the body is eternal.",
+          "commentary": "Direct application of the Atman's eternity - commanding Arjuna to fight."
+        },
+        {
+          "verse_number": 19,
+          "sanskrit": "य एनं वेत्ति हन्तारं यश्चैनं मन्यते हतम्।",
+          "transliteration": "ya enaṁ vetti hantāraṁ yaś chainaṁ manyate hatam",
+          "hindi_translation": "जो इसे मारने वाला समझता है और जो इसे मरा हुआ समझता है, दोनों ही नहीं जानते।",
+          "english_translation": "He who thinks this Atman slays, and he who thinks it is slain, both do not understand.",
+          "commentary": "Clarification that the Atman cannot be killed - both slayer and slain misunderstand its nature."
+        },
+        {
+          "verse_number": 20,
+          "sanskrit": "न जायते मियते वा कदाचिन्नायं भूतवा भविता वा न भूयः।",
+          "transliteration": "na jāyate miyate vā kadāchin nāyaṁ bhūtvā bhavitā vā na bhūyaḥ",
+          "hindi_translation": "यह न जन्म लेता है और न मरता है। यह अजन्मा, नित्य, शाश्वत और पुरातन है।",
+          "english_translation": "The Atman is never born, nor does it die. It is unborn, eternal, permanent, and primaeval.",
+          "commentary": "Comprehensive statement of the Atman's qualities - timeless and transcendent existence."
+        },
+        {
+          "verse_number": 21,
+          "sanskrit": "वेदाविनाशिनं नित्यं य एनामजमव्ययम्।",
+          "transliteration": "vedāvināśinaṁ nityaṁ ya enām ajam avyayam",
+          "hindi_translation": "हे पार्थ! जो पुरुष इस अविनाशी, नित्य, अजन्मा को जानता है, वह कैसे किसी को मार सकता है?",
+          "english_translation": "O Partha! One who knows the Atman to be indestructible can never kill anyone.",
+          "commentary": "True knowledge of the Atman naturally leads to understanding that killing is impossible."
+        },
+        {
+          "verse_number": 22,
+          "sanskrit": "वासांसि जीर्णानि यथा विहाय नवानि गृह्णाति नरोऽपराणि।",
+          "transliteration": "vāsāṁsi jīrṇāni yathā vihāya navāni gṛhṇāti naro 'parāṇi",
+          "hindi_translation": "जैसे मनुष्य पुरानी वस्त्रों को त्यागकर नई वस्त्रें पहनता है।",
+          "english_translation": "As a person sheds worn-out garments and puts on new ones, so the Atman casts off worn-out bodies.",
+          "commentary": "The famous metaphor explaining reincarnation through the analogy of changing clothes."
+        },
+        {
+          "verse_number": 23,
+          "sanskrit": "नैनं छिंदन्ति शस्त्राणि नैनं दहति पावकः।",
+          "transliteration": "nainaṁ chindanti śastrāṇi nainaṁ dahati pāvakaḥ",
+          "hindi_translation": "इस आत्मा को न तो शस्त्र काट सकते हैं, न आग जला सकती है।",
+          "english_translation": "Weapons cannot pierce the Atman, fire cannot burn it, water cannot wet it.",
+          "commentary": "Emphasis on the imperviousness of the Atman to all physical forces."
+        },
+        {
+          "verse_number": 27,
+          "sanskrit": "जातस्य हि ध्रुवो मृत्युर्ध्रुवं जन्म मृतस्य च।",
+          "transliteration": "jātasya hi dhruvo mṛtyu dhruvaṁ janma mṛtasya cha",
+          "hindi_translation": "जन्मे हुए की मृत्यु निश्चित है और मरे हुए का जन्म निश्चित है।",
+          "english_translation": "Death is certain for the born, and birth is certain for the dead.",
+          "commentary": "The inevitability of the life and death cycle - a fact that requires acceptance."
+        },
+        {
+          "verse_number": 31,
+          "sanskrit": "स्वधर्ममपि चावेक्ष्य न विकम्पितुमर्हसि।",
+          "transliteration": "sva-dharmam api chāvekṣya na vikampitum arhasi",
+          "hindi_translation": "अपने धर्म को भी ध्यान में रखते हुए, तुम्हें विचलित नहीं होना चाहिए।",
+          "english_translation": "Consider also your own duty and do not hesitate. For a warrior, there is nothing greater than a righteous battle.",
+          "commentary": "Introduction of the concept of Svadharma - duty according to one's position and nature."
+        },
+        {
+          "verse_number": 32,
+          "sanskrit": "यदृच्छया चोपपन्नं स्वर्गद्वारमपावृतम्।",
+          "transliteration": "yadṛchhayā chopapannaṁ svarga-dvāram apāvṛtam",
+          "hindi_translation": "हे पार्थ! भाग्य से मिला यह युद्ध जो स्वर्ग के द्वार को खोल देता है।",
+          "english_translation": "O Partha! Fortunate warriors obtain such a battle that is like an open gate to heaven.",
+          "commentary": "Krishna describes the opportunity to fight in a righteous war as spiritually auspicious."
+        },
+        {
+          "verse_number": 37,
+          "sanskrit": "सुखदुःखे समे कृत्वा लाभालाभौ जयाजयौ।",
+          "transliteration": "sukha-duḥkhe same kṛtvā lābhālābhau jayājayau",
+          "hindi_translation": "सुख-दुःख को समान मानकर, लाभ-हानि को बराबर समझकर, युद्ध के लिए तत्पर हो।",
+          "english_translation": "Treating pleasure and pain, gain and loss, victory and defeat as equal, engage in battle.",
+          "commentary": "The practice of Samatva (equanimity) in action - the essence of nishkama karma."
+        },
+        {
+          "verse_number": 47,
+          "sanskrit": "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।",
+          "transliteration": "karmaṇy evādhikāras te mā phaleṣu kadāchana",
+          "hindi_translation": "तुम्हारा अधिकार केवल कर्म करने में है, कभी भी फल में नहीं।",
+          "english_translation": "You have the right to work only, but never to its fruits. Never be the cause of results.",
+          "commentary": "The central teaching of Nishkama Karma - performing duty without attachment to results."
+        },
+        {
+          "verse_number": 48,
+          "sanskrit": "योगस्थः कुरु कर्माणि सङ्गं त्यक्त्वा धनञ्जय।",
+          "transliteration": "yoga-sthaḥ kuru karmāṇi saṁgaṁ tyaktvā dhanañjaya",
+          "hindi_translation": "हे धनञ्जय! योग में स्थित होकर कर्म करो, आसक्ति को त्यागकर।",
+          "english_translation": "Perform your duties with equanimity, O Dhananjaya, abandoning attachment.",
+          "commentary": "Krishna defines Yoga as performing action while maintaining equanimity toward results."
+        },
+        {
+          "verse_number": 50,
+          "sanskrit": "बुद्धियुक्तो जहातीह उभे सुकृतदुष्कृते।",
+          "transliteration": "buddhi-yukto jahātīh ubhe sukṛta-duṣkṛte",
+          "hindi_translation": "जो बुद्धि-युक्त है, वह यहाँ पुण्य और पाप दोनों को त्याग देता है।",
+          "english_translation": "One established in wisdom renounces both merit and demerit here. Therefore, devote yourself to Yoga.",
+          "commentary": "Enlightened action transcends the categories of good and bad - true wisdom lies beyond duality."
+        },
+        {
+          "verse_number": 55,
+          "sanskrit": "प्रजहाति यदा कामान्सर्वान्पार्थ मनोगतान्।",
+          "transliteration": "prajahāti yadā kāmān sarvān pārth mano-gatān",
+          "hindi_translation": "हे पार्थ! जब मनुष्य सभी कामनाओं को त्याग देता है, वह स्थितप्रज्ञ है।",
+          "english_translation": "O Partha! When a person abandons all the desires that arise in the mind, he is said to have steady wisdom.",
+          "commentary": "Definition of the enlightened person - one who has transcended desires and found satisfaction in the Atman."
+        },
+        {
+          "verse_number": 62,
+          "sanskrit": "ध्यायतो विषयान्पुंसः सङ्गस्तेषूपजायते।",
+          "transliteration": "dhyāyato viṣayān puṁsaḥ saṅgas teṣūpajāyate",
+          "hindi_translation": "जब पुरुष विषयों का ध्यान करता है, तो उनमें आसक्ति उत्पन्न होती है।",
+          "english_translation": "When a person dwells on sensory objects, attachment develops.",
+          "commentary": "Beginning of the chain describing how desire leads to negative consequences - a critical teaching."
+        },
+        {
+          "verse_number": 63,
+          "sanskrit": "क्रोधाद्भवति सम्मोहः सम्मोहात्स्मृतिविभ्रमः।",
+          "transliteration": "krodhād bhavati sammohah sammohat sṛti-vibhramaḥ",
+          "hindi_translation": "क्रोध से मोह होता है, मोह से स्मृति विभ्रम होता है।",
+          "english_translation": "From anger arises delusion, from delusion the confusion of memory.",
+          "commentary": "Continuation of the chain - anger leads to delusion and loss of intelligence, ultimately to self-destruction."
+        },
+        {
+          "verse_number": 67,
+          "sanskrit": "इन्द्रियाणां हि चरतां यन्मनोऽनुविधीयते।",
+          "transliteration": "indriyāṇāṁ hi charatāṁ yan mano 'nuvidhīyate",
+          "hindi_translation": "जब मन विचरण करती हुई इंद्रियों का अनुसरण करता है, तो बुद्धि को हरण कर लेता है।",
+          "english_translation": "For one whose mind follows the wandering senses, wisdom is carried away like a boat swept away by wind.",
+          "commentary": "The danger of an uncontrolled mind - loss of wisdom and spiritual destruction."
+        },
+        {
+          "verse_number": 70,
+          "sanskrit": "आपूर्यमाणमचलप्रतिष्ठं समुद्रमापः प्रविशन्ति यद्वत्।",
+          "transliteration": "āpūryamāṇam achala-pratiṣṭhaṁ samudram āpaḥ praviśanti yadvat",
+          "hindi_translation": "जैसे जल समुद्र में प्रवेश करते हैं, लेकिन समुद्र में कोई परिवर्तन नहीं होता।",
+          "english_translation": "As all waters merge into the ocean without disturbing its equilibrium, so all desires merge into one without disturbing his peace.",
+          "commentary": "Beautiful metaphor - the equanimous sage remains unmoved like the ocean, indifferent to desires."
+        }
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Karma Yoga",
+      "chapter_name_hindi": "कर्म योग",
+      "chapter_summary": "Krishna teaches that action without attachment to results is superior to inaction. He explains the philosophy of Nishkama Karma and the importance of performing one's duties without selfish motivation.",
+      "verses": [
+        {
+          "verse_number": 5,
+          "sanskrit": "न हि कश्चित्क्षणमपि जातु तिष्ठत्यकर्मकृत्।",
+          "transliteration": "na hi kaśchit kṣaṇam api jātu tiṣṭhaty akarmakṛt",
+          "hindi_translation": "कोई भी क्षण भर के लिए भी निष्क्रिय नहीं रह सकता है।",
+          "english_translation": "Not for a moment can anyone remain without performing action.",
+          "commentary": "Everyone is bound to perform action according to their nature and the gunas."
+        },
+        {
+          "verse_number": 6,
+          "sanskrit": "कर्मेन्द्रियाणि संयम्य य आस्ते मनसा स्मरन्।",
+          "transliteration": "karmendriyāṇi saṁyamya ya āste manasā smaran",
+          "hindi_translation": "जो कर्मेंद्रियों को नियंत्रित करके, मन से विषयों का स्मरण करता है।",
+          "english_translation": "One who controls the action senses but mentally dwells on the objects of the senses.",
+          "commentary": "External control without mental discipline is incomplete and leads to confusion."
+        },
+        {
+          "verse_number": 8,
+          "sanskrit": "नियतं कुरु कर्म त्वं कर्म ज्यायो ह्यकर्मणः।",
+          "transliteration": "niyataṁ kuru karma tvaṁ karma jyāyo hy akarmaṇaḥ",
+          "hindi_translation": "तुम अपने निर्धारित कर्म को करो। कर्म अकर्म से बेहतर है।",
+          "english_translation": "Perform your prescribed duty, for action is superior to inaction.",
+          "commentary": "Doing one's duty, even with difficulty, is better than avoiding responsibility."
+        },
+        {
+          "verse_number": 9,
+          "sanskrit": "यज्ञार्थात्कर्मणोऽन्यत्र लोकोऽयं कर्मबन्धनः।",
+          "transliteration": "yajñārthāt karmaṇo 'nyatra loko 'yaṁ karma-bandhanah",
+          "hindi_translation": "यज्ञ के लिए किए गए कर्म के अलावा अन्य कर्मों से लोक बन्धित है।",
+          "english_translation": "This world is bound by action, unless action is performed as sacrifice. Therefore, perform action as a sacrifice, free from attachment.",
+          "commentary": "Action performed selflessly (yagna) liberates, while selfish action binds."
+        },
+        {
+          "verse_number": 16,
+          "sanskrit": "य इदं परमं गुह्यं मद्भक्तेष्वभिधास्यति।",
+          "transliteration": "ya idaṁ paramaṁ guhyaṁ mad-bhakteṣv abhidhāsyati",
+          "hindi_translation": "जो इस परम गुह्य को मेरे भक्तों को सिखाएगा।",
+          "english_translation": "One who teaches this supreme secret to My devotees performs the greatest service.",
+          "commentary": "Sharing this knowledge with sincere seekers is the highest form of service."
+        },
+        {
+          "verse_number": 17,
+          "sanskrit": "न मे पार्थास्ति कर्तव्यं त्रिषु लोकेषु किञ्चन।",
+          "transliteration": "na me pārthāsti kartavyaṁ triṣu lokeṣu kiñchana",
+          "hindi_translation": "हे पार्थ! मेरे लिए तीनों लोकों में कोई कर्तव्य नहीं है।",
+          "english_translation": "O Partha! There is nothing in all the three worlds that I need to do, nor is there anything I have not obtained.",
+          "commentary": "Krishna illustrates how the divine, being complete, acts without selfish motivation."
+        },
+        {
+          "verse_number": 18,
+          "sanskrit": "यदि ह्यहं न वर्तेयं जातु कर्मणि यत्निमान्।",
+          "transliteration": "yadi hy ahaṁ na varteyaṁ jātu karmaṇi yatnimaān",
+          "hindi_translation": "यदि मैं कर्मों में कर्तव्यपरायण न होता।",
+          "english_translation": "If I did not engage in action, all the worlds would collapse.",
+          "commentary": "The divine purpose of action - to maintain cosmic order and set an example for others."
+        },
+        {
+          "verse_number": 19,
+          "sanskrit": "लोकसङ्ग्रहमेवैप साध्य कर्मैव तदेह सः।",
+          "transliteration": "loka-saṅgraham evāpi sādhya karmev tadeha saḥ",
+          "hindi_translation": "इसलिए तुम्हें भी सार्वजनिक कल्याण के लिए कर्तव्यपरायण होना चाहिए।",
+          "english_translation": "Therefore, you should also work for the welfare of the world.",
+          "commentary": "Actions performed for the welfare of society, not selfish gain, lead to spiritual progress."
+        },
+        {
+          "verse_number": 25,
+          "sanskrit": "साक्षिभूते न कर्तृत्वं कर्मनो यदि मानते।",
+          "transliteration": "sākṣibhūte na kartṛtvaṁ karmano yadi māante",
+          "hindi_translation": "यदि बुद्धिमान सर्व काम कर्नी नहीं समझते, तो वह कर्ता नहीं है।",
+          "english_translation": "If the wise one does not consider himself the doer of actions while seeing clearly, he is not the real agent.",
+          "commentary": "Understanding that one is not the actual doer (witness consciousness) leads to freedom."
+        },
+        {
+          "verse_number": 27,
+          "sanskrit": "प्रकृतेः क्रियमाणानि गुणैः कर्माणि सर्वशः।",
+          "transliteration": "prakṛteḥ kriyamāṇāni guṇaiḥ karmāṇi sarvaśaḥ",
+          "hindi_translation": "सभी कर्म प्रकृति के तीनों गुणों द्वारा किए जाते हैं।",
+          "english_translation": "All actions are performed by the gunas of nature. The deluded think of himself as the doer.",
+          "commentary": "True knowledge is understanding that the Gunas (qualities of nature) are the real agents of action."
+        },
+        {
+          "verse_number": 28,
+          "sanskrit": "तत्त्वविद्भिः तु महाबाहो गुणकर्मविभागयोः।",
+          "transliteration": "tattva-vidbhiḥ tu mahā-bāho guṇa-karma-vibhāgayoḥ",
+          "hindi_translation": "हे महाबाहो! लेकिन जो तत्त्वज्ञानी हैं, वे गुणों और कर्मों के विभाजन को जानते हैं।",
+          "english_translation": "But one who knows the truth about the division of the gunas and their actions is not attached.",
+          "commentary": "True knowledge brings detachment from the fruits of action."
+        },
+        {
+          "verse_number": 30,
+          "sanskrit": "मयि सर्वाणि कर्माणि संन्यस्याध्यात्मचेतसा।",
+          "transliteration": "mayi sarvāṇi karmāṇi sannyasyādhyātma-chetasā",
+          "hindi_translation": "मुझमें सभी कर्मों को अर्पित करके, आध्यात्मिक चेतना के साथ कर्म करो।",
+          "english_translation": "Dedicate all your actions to Me and perform them with your mind absorbed in the Atman.",
+          "commentary": "Performing all actions as an offering to the divine leads to spiritual liberation."
+        },
+        {
+          "verse_number": 33,
+          "sanskrit": "सदृशं चेष्टते स्वस्याः प्रकृतेः ज्ञानवानपि।",
+          "transliteration": "sadṛśaṁ cheṣṭate svasyāḥ prakṛteḥ jñānavān api",
+          "hindi_translation": "जानकार भी अपनी प्रकृति के अनुसार कर्म करता है।",
+          "english_translation": "Even the wise act according to their nature. All beings follow their nature.",
+          "commentary": "One should perform duties according to their nature and position, not imitate others."
+        },
+        {
+          "verse_number": 35,
+          "sanskrit": "श्रेयान्स्वधर्मो विगुणः परधर्मात्सुनुष्ठितात्।",
+          "transliteration": "śreyān sva-dharmo viguṇaḥ para-dharmāt suṇuṣṭhitāt",
+          "hindi_translation": "अपना धर्म, भले ही दोषपूर्ण हो, दूसरे के धर्म से श्रेष्ठ है।",
+          "english_translation": "It is better to perform one's own duty imperfectly than another's duty perfectly.",
+          "commentary": "Emphasis on performing one's own duty (svadharma) according to one's position and nature."
+        },
+        {
+          "verse_number": 36,
+          "sanskrit": "अथ केन प्रयुक्तो ऽयं पापं चरति पुरुषः।",
+          "transliteration": "atha kena prayukto 'yaṁ pāpaṁ charati puruṣaḥ",
+          "hindi_translation": "अब यह बताओ, कौन इस पुरुष को पाप के लिए प्रेरित करता है?",
+          "english_translation": "But what impels a person to commit sin against his will?",
+          "commentary": "Arjuna asks about the force that drives people toward sinful actions despite their better judgment."
+        },
+        {
+          "verse_number": 37,
+          "sanskrit": "काम एष क्रोध एष रजोगुणसमुद्भवः।",
+          "transliteration": "kāma eṣa krodha eṣa rajo-guṇa-samud-bhavaḥ",
+          "hindi_translation": "यह काम है, यह क्रोध है, जो रजोगुण से उत्पन्न होता है।",
+          "english_translation": "This desire and anger arise from the Rajas guna. They are voracious and greatly sinful.",
+          "commentary": "Desire and anger, born from Rajas (the quality of passion), are the main obstacles to spiritual progress."
+        },
+        {
+          "verse_number": 41,
+          "sanskrit": "तस्मात्त्वमिन्द्रियाण्यादौ नियम्य भरतर्षभ।",
+          "transliteration": "tasmāt tvam indriyāṇ ādau niyamya bhrata-riśabha",
+          "hindi_translation": "इसलिए हे भरतश्रेष्ठ! पहले तुम्हें इंद्रियों को नियंत्रित करना चाहिए।",
+          "english_translation": "Therefore, O bull among the descendants of Bharata! First subdue the senses.",
+          "commentary": "The practical path to spiritual progress begins with control and discipline of the senses."
+        },
+        {
+          "verse_number": 42,
+          "sanskrit": "इन्द्रियाणि पराण्याहुरिन्द्रियेभ्यः परं मनः।",
+          "transliteration": "indriyāṇi parāṇy āhur indriyebhyaḥ paraṁ manaḥ",
+          "hindi_translation": "इंद्रियाँ श्रेष्ठ हैं, इंद्रियों से मन श्रेष्ठ है।",
+          "english_translation": "The senses are superior to the gross body, the mind is superior to the senses.",
+          "commentary": "Hierarchy of consciousness - from physical to mental to intellectual to spiritual dimensions."
+        }
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Jnana Karma Sanyasa Yoga",
+      "chapter_name_hindi": "ज्ञान कर्म सन्यास योग",
+      "chapter_summary": "Krishna reveals the concept of divine incarnation and the importance of knowledge. He describes how actions are purified through knowledge and emphasizes the superiority of knowledge over action.",
+      "verses": [
+        {
+          "verse_number": 5,
+          "sanskrit": "बहूनि मे व्यतीतानि जन्मानि तव चार्जुन।",
+          "transliteration": "bahūni me vyatītāni janmāni tava chārjuna",
+          "hindi_translation": "हे अर्जुन! मेरे और तुम्हारे कई जन्म हो चुके हैं।",
+          "english_translation": "Many births of Mine and yours have passed, O Arjuna.",
+          "commentary": "Introduction of the concept of divine incarnation and cyclic rebirths."
+        },
+        {
+          "verse_number": 6,
+          "sanskrit": "अजोऽपि सन्नव्ययात्मा भूतानामीश्वरोऽपि सन्।",
+          "transliteration": "ajo 'pi sann avyayātmā bhūtānām īśvaro 'pi san",
+          "hindi_translation": "यद्यपि मैं अजन्मा हूँ, अविनाशी आत्मा हूँ, और सभी प्राणियों का स्वामी हूँ।",
+          "english_translation": "Though I am unborn and eternal, and though I am the Lord of all beings.",
+          "commentary": "Krishna describes his divine nature - unborn, eternal, and omniscient."
+        },
+        {
+          "verse_number": 7,
+          "sanskrit": "यदा यदा हि धर्मस्य ग्लानिर्भवति भारत।",
+          "transliteration": "yadā yadā hi dharmasya glānir bhavati bhārat",
+          "hindi_translation": "हे भारत! जब भी धर्म की हानि होती है।",
+          "english_translation": "O Bharata! Whenever there is a decline of righteousness.",
+          "commentary": "The beginning of the famous Avatara Yoga - the principle of divine incarnation for cosmic restoration."
+        },
+        {
+          "verse_number": 8,
+          "sanskrit": "अभ्युत्थानाय साधूनां विनाशाय च दुष्कृताम्।",
+          "transliteration": "abhyutthānāya sādhūnāṁ vināśāya cha duṣkṛtām",
+          "hindi_translation": "साधुओं की रक्षा के लिए और दुष्टों का विनाश करने के लिए।",
+          "english_translation": "For the protection of the righteous and the destruction of the wicked.",
+          "commentary": "The purpose of divine incarnation - to preserve virtue and eliminate vice."
+        },
+        {
+          "verse_number": 9,
+          "sanskrit": "जन्म कर्म च मे दिव्यमेवं यो वेत्ति तत्त्वतः।",
+          "transliteration": "janma karma cha me divyam evaṁ yo vetti tattvataḥ",
+          "hindi_translation": "जो मेरे दिव्य जन्म और कर्मों को तत्त्व से जानता है।",
+          "english_translation": "One who knows the divine nature of My birth and actions in truth.",
+          "commentary": "Understanding the divine incarnation leads to liberation."
+        },
+        {
+          "verse_number": 13,
+          "sanskrit": "चातुर्वर्ण्यं मया सृष्टं गुणकर्मविभागशः।",
+          "transliteration": "chātur-varṇyaṁ mayā sṛṣṭaṁ guṇa-karma-vibhāgaśaḥ",
+          "hindi_translation": "मैंने गुणों और कर्मों के भेद से चार वर्णों की रचना की है।",
+          "english_translation": "The four-fold caste system has been created by Me based on the division of qualities and work.",
+          "commentary": "The varna system is based on natural qualities and occupations, not birth alone."
+        },
+        {
+          "verse_number": 14,
+          "sanskrit": "न मां कर्माणि लिम्पन्ति न मे कर्मफले स्पृहा।",
+          "transliteration": "na māṁ karmāṇi limpanti na me karma-phale spṛhā",
+          "hindi_translation": "कर्म मुझे प्रदूषित नहीं करते, और न ही मेरी कर्मों के फलों में इच्छा है।",
+          "english_translation": "Actions do not taint Me, nor do I have any desire for the fruits of action.",
+          "commentary": "The divine is unaffected by karma, remaining ever pure and free from attachment."
+        },
+        {
+          "verse_number": 16,
+          "sanskrit": "किं कर्म किमकर्मेति कवयोऽप्यत्र मोहिताः।",
+          "transliteration": "kiṁ karma kimakarmeti kavayo 'py atra mohitāḥ",
+          "hindi_translation": "क्या कर्म है, क्या अकर्म है, इस विषय में विद्वान भी भ्रमित होते हैं।",
+          "english_translation": "Even the learned are confused about what is action and what is inaction.",
+          "commentary": "The paradox of action and inaction - a profound topic that even wise people struggle to understand."
+        },
+        {
+          "verse_number": 17,
+          "sanskrit": "कर्मणो ह्यपि बोद्धव्यं बोद्धव्यं च विकर्मणः।",
+          "transliteration": "karmaṇo hy api boddhavyaṁ boddhavyaṁ cha vikarmaṇaḥ",
+          "hindi_translation": "कर्म को जानना और विकर्म को जानना दोनों आवश्यक हैं।",
+          "english_translation": "One should understand action as well as forbidden action.",
+          "commentary": "Proper understanding of the three types of action is essential for spiritual progress."
+        },
+        {
+          "verse_number": 18,
+          "sanskrit": "कर्मण्यकर्म यः पश्येदकर्मणि च कर्म यः।",
+          "transliteration": "karmaṇy akrama yaḥ paśyed akarmani cha karma yaḥ",
+          "hindi_translation": "जो कर्म में अकर्म देखे और अकर्म में कर्म देखे।",
+          "english_translation": "One who sees inaction in action and action in inaction.",
+          "commentary": "The enlightened perspective - understanding the paradoxical nature of action and inaction."
+        },
+        {
+          "verse_number": 23,
+          "sanskrit": "गतसङ्गस्य मुक्तस्य ज्ञानावस्थितचेतसः।",
+          "transliteration": "gata-saṅgasya muktasya jñānāvasthita-chetasaḥ",
+          "hindi_translation": "जो आसक्ति से मुक्त, ज्ञान में स्थित चित्त वाले हैं।",
+          "english_translation": "One who is free from attachment, liberated, and whose mind is established in knowledge.",
+          "commentary": "The characteristics of the self-realized person - freedom, knowledge, and inner stability."
+        },
+        {
+          "verse_number": 34,
+          "sanskrit": "तद्विद्धि प्रणिपातेन परिप्रश्नेन सेवया।",
+          "transliteration": "tad viddhi praṇipātena paripraśnena sevayā",
+          "hindi_translation": "इसे प्रणाम, प्रश्न और सेवा द्वारा समझो।",
+          "english_translation": "Know this by prostration, inquiry, and service.",
+          "commentary": "The three methods of receiving spiritual knowledge - humility, questions, and selfless service."
+        },
+        {
+          "verse_number": 35,
+          "sanskrit": "यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः।",
+          "transliteration": "yajña-śiṣṭāśinaḥ santo muchyante sarva-kilbiṣaiḥ",
+          "hindi_translation": "यज्ञ से बचा अन्न खाने वाले संतजन सभी पापों से मुक्त हो जाते हैं।",
+          "english_translation": "The righteous who eat the remnants of sacrifice are freed from all sins.",
+          "commentary": "The sanctifying power of performing actions as offerings and sharing with others."
+        },
+        {
+          "verse_number": 37,
+          "sanskrit": "ज्ञानाग्निः सर्वकर्माणि भस्मसात्कुरुते अर्जुन।",
+          "transliteration": "jñānāgniḥ sarva-karmāṇi bhasmasāt kurute arjun",
+          "hindi_translation": "हे अर्जुन! ज्ञान की अग्नि सभी कर्मों को भस्म कर देती है।",
+          "english_translation": "O Arjuna! The fire of knowledge reduces all actions to ashes.",
+          "commentary": "Knowledge is the ultimate purifier - it destroys the karmic consequences of all past actions."
+        },
+        {
+          "verse_number": 38,
+          "sanskrit": "न हि ज्ञानेन सदृशं पवित्रमिह विद्यते।",
+          "transliteration": "na hi jñānena sadṛśaṁ pavitram iha vidyate",
+          "hindi_translation": "निश्चित रूप से इस संसार में ज्ञान के समान पवित्र कुछ नहीं है।",
+          "english_translation": "There is no purifier in this world comparable to knowledge.",
+          "commentary": "Knowledge is the supreme purifying force, surpassing all rituals and practices."
+        },
+        {
+          "verse_number": 39,
+          "sanskrit": "श्रद्धावान्लभते ज्ञानं तत्परः संयतेन्द्रियः।",
+          "transliteration": "śraddhāvān labhate jñānaṁ tat-paraḥ saṁyatendriyaḥ",
+          "hindi_translation": "जो श्रद्धावान और परायण है, इंद्रियों को नियंत्रित करता है, वह ज्ञान को प्राप्त करता है।",
+          "english_translation": "One who has faith and is devoted, with senses under control, obtains knowledge.",
+          "commentary": "The qualifications for obtaining self-knowledge - faith, dedication, and sense control."
+        },
+        {
+          "verse_number": 40,
+          "sanskrit": "ज्ञानं लब्ध्वा परां शान्तिमचिरेणाधिगच्छति।",
+          "transliteration": "jñānaṁ labdhvā parāṁ śāntim achireṇādhigachhati",
+          "hindi_translation": "ज्ञान को प्राप्त करके, वह शीघ्र ही परम शांति को प्राप्त करता है।",
+          "english_translation": "Having obtained knowledge, one quickly attains supreme peace.",
+          "commentary": "Knowledge leads directly to spiritual liberation and eternal peace."
+        }
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Karma Sanyasa Yoga",
+      "chapter_name_hindi": "कर्म सन्यास योग",
+      "chapter_summary": "Krishna discusses the equivalence of renunciation and yoga of action. He explains that true renunciation is not abandonment of action but performing action without attachment.",
+      "verses": [
+        {
+          "verse_number": 2,
+          "sanskrit": "श्रीभगवानुवाच। संन्यासः कर्मयोगश्च निःश्रेयसकरावुभौ।",
+          "transliteration": "śrī bhagavān uvācha sannyāsaḥ karma-yogaś cha niḥ-śreyasa-karāv ubhau",
+          "hindi_translation": "श्रीभगवान ने कहा: संन्यास और कर्म-योग दोनों कल्याण के लिए हैं।",
+          "english_translation": "The Blessed Lord said: Both renunciation and the yoga of action lead to the highest good.",
+          "commentary": "Both paths, properly practiced, lead to liberation - they are not contradictory."
+        },
+        {
+          "verse_number": 3,
+          "sanskrit": "ज्ञेयः स नित्यसंन्यासी यो न द्वेष्टि न काङ्क्षति।",
+          "transliteration": "jñeyaḥ sa nitya-sannyāsī yo na dveṣṭi na kāṅkṣati",
+          "hindi_translation": "जो न किसी से द्वेष करता है और न किसी की कामना करता है, वह नित्य संन्यासी है।",
+          "english_translation": "The person who neither hates nor desires anything is the real renunciate.",
+          "commentary": "True renunciation is an inner attitude of non-attachment, not merely external withdrawal."
+        },
+        {
+          "verse_number": 4,
+          "sanskrit": "अर्जुन उवाच। संन्यासं कर्मयोगं च पृथक् बुद्धा धनञ्जय।",
+          "transliteration": "arjun uvācha sannyāsaṁ karma-yogaṁ cha pṛthak buddhā dhanañjay",
+          "hindi_translation": "अर्जुन ने कहा: हे धनञ्जय! मैं संन्यास और कर्म-योग को अलग-अलग समझता हूँ।",
+          "english_translation": "Arjuna said: O Dhananjaya! I regard renunciation and yoga of action as distinct.",
+          "commentary": "Arjuna seeks clarification on the relationship between renunciation and action."
+        },
+        {
+          "verse_number": 5,
+          "sanskrit": "संन्यासः कर्मयोगश्च निःश्रेयसकरावुभौ।",
+          "transliteration": "sannyāsaḥ karma-yogaś cha niḥ-śreyasa-karāv ubhau",
+          "hindi_translation": "संन्यास और कर्म-योग दोनों कल्याण के लिए हैं।",
+          "english_translation": "Both renunciation and yoga of action lead to the supreme goal.",
+          "commentary": "Repetition emphasizing the point that both paths are equally valid and effective."
+        },
+        {
+          "verse_number": 6,
+          "sanskrit": "संन्यास स्तु महाबाहो दुःखमाप्तुमयोग्यते।",
+          "transliteration": "sannyās stu mahā-bāho duḥkham āptum ayogyate",
+          "hindi_translation": "हे महाबाहो! किंतु संन्यास प्राप्त करना कठिन है।",
+          "english_translation": "O mighty-armed one! But renunciation is difficult to attain.",
+          "commentary": "Pure renunciation, without associated knowledge, is difficult and may be incomplete."
+        },
+        {
+          "verse_number": 8,
+          "sanskrit": "नैव किञ्चित्करोमीति युक्तो मन्येत तत्त्ववित्।",
+          "transliteration": "naiva kiñchit karomīti yukto manyeta tattva-vit",
+          "hindi_translation": "जो तत्त्ववेत्ता है, वह सोचता है कि मैं कुछ नहीं कर रहा हूँ।",
+          "english_translation": "The person established in truth thinks, 'I am not doing anything.'",
+          "commentary": "True knowledge brings the understanding that the Self is not the doer of actions."
+        },
+        {
+          "verse_number": 10,
+          "sanskrit": "कर्मयोगधरा यस्तु न द्वेष्टि न काङ्क्षति।",
+          "transliteration": "karma-yoga-dharā yas tu na dveṣṭi na kāṅkṣati",
+          "hindi_translation": "जो कर्म-योग को धारण करता है, न किसी से द्वेष करता है, न काम करता है।",
+          "english_translation": "One who performs action without hatred or craving is the true yogi.",
+          "commentary": "The yogi of action performs duties with detachment and equanimity."
+        },
+        {
+          "verse_number": 11,
+          "sanskrit": "कायेन मनसा बुद्ध्या केवलैरिन्द्रियैरपि।",
+          "transliteration": "kāyena manasā buddhyā kevalairindriyair api",
+          "hindi_translation": "शरीर, मन, बुद्धि और इंद्रियों से कर्म-योग का अभ्यास करते हुए।",
+          "english_translation": "Even while performing actions through the body, mind, intellect, and senses.",
+          "commentary": "Practical guidance on how to engage in action while maintaining inner detachment."
+        },
+        {
+          "verse_number": 13,
+          "sanskrit": "सर्वकर्माणि मनसा संन्यस्य अस्ते सुखम्।",
+          "transliteration": "sarva-karmāṇi manasā sannyasya āste sukham",
+          "hindi_translation": "सभी कर्मों को मन से त्यागकर, शरीर में ही सुख से रहता है।",
+          "english_translation": "The wise person, having renounced all actions mentally, dwells in peace in the body.",
+          "commentary": "Mental renunciation while physically performing duties leads to peace."
+        },
+        {
+          "verse_number": 16,
+          "sanskrit": "ज्ञानेन तु तदज्ञानं येषां नाशितमात्मनः।",
+          "transliteration": "jñānena tu tad ajñānaṁ yeṣāṁ nāśitam ātmanaḥ",
+          "hindi_translation": "जिनके आत्मा का अज्ञान ज्ञान से नष्ट हो गया है।",
+          "english_translation": "Those whose ignorance is destroyed by knowledge of the Self.",
+          "commentary": "Knowledge of the Self is the ultimate destroyer of ignorance."
+        },
+        {
+          "verse_number": 17,
+          "sanskrit": "ब्रह्मभूत प्रसन्नात्मा न शोचति न काङ्क्षति।",
+          "transliteration": "brahma-bhūta prasannātmā na śochati na kāṅkṣati",
+          "hindi_translation": "ब्रह्म में स्थित, प्रसन्न आत्मा वाला न शोक करता है, न काम करता है।",
+          "english_translation": "Established in Brahman, with a peaceful Self, one neither grieves nor desires.",
+          "commentary": "The state of brahma-bhuta - merger of individual consciousness with universal consciousness."
+        },
+        {
+          "verse_number": 20,
+          "sanskrit": "ब्राह्मणे गवि हस्तिनि शुनि चैव श्वपाके।",
+          "transliteration": "brāhmaṇe gavi hastini śuni chaiva śva-pāke",
+          "hindi_translation": "ब्राह्मण, गाय, हाथी, कुत्ता और मलेच्छ सभी में समान दृष्टि है।",
+          "english_translation": "The wise one sees the same Self in a learned person, a cow, an elephant, and a dog.",
+          "commentary": "The vision of equanimity extends to all beings - seeing the same Atman everywhere."
+        },
+        {
+          "verse_number": 21,
+          "sanskrit": "इहैव तैर्जितः सर्गो येषां साम्ये स्थितं मनः।",
+          "transliteration": "ihaiv tair jitaḥ sargo yeṣāṁ sāmye sthitaṁ manaḥ",
+          "hindi_translation": "जिनका मन समता में स्थित है, वे इसी लोक में सृष्टि को जीत लेते हैं।",
+          "english_translation": "Those whose mind is fixed in equanimity conquer the world even here.",
+          "commentary": "Equanimity is the key to spiritual liberation and inner freedom."
+        },
+        {
+          "verse_number": 22,
+          "sanskrit": "न प्रहृष्येत्प्रियं प्राप्य नोद्विजेत्प्राप्य चाप्रियम्।",
+          "transliteration": "na prahṛṣyet priyaṁ prāpya nodvijeta prāpya chāpriyam",
+          "hindi_translation": "प्रिय पाकर न हर्षित हो, अप्रिय पाकर न विषादी हो।",
+          "english_translation": "One should not be elated on obtaining the agreeable, nor depressed on obtaining the disagreeable.",
+          "commentary": "The practice of equanimity in dealing with life's ups and downs."
+        },
+        {
+          "verse_number": 24,
+          "sanskrit": "यस्य नाहङ्कृतो भावो बुद्धिर्यस्य न लिप्यते।",
+          "transliteration": "yasya nāhaṅ-kṛto bhāvo buddhir yasya na lipyate",
+          "hindi_translation": "जिसका अहंकार नष्ट हो गया है, जिसकी बुद्धि आसक्त नहीं है।",
+          "english_translation": "One who has no ego and whose intellect is not attached.",
+          "commentary": "The dissolution of ego-sense leads to freedom and realization."
+        }
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Dhyana Yoga",
+      "chapter_name_hindi": "ध्यान योग",
+      "chapter_summary": "Krishna teaches the practice of meditation and the importance of discipline. He describes the path of Yoga for achieving union with the divine and the characteristics of the perfect yogi.",
+      "verses": [
+        {
+          "verse_number": 3,
+          "sanskrit": "आरुरुक्षोर्मुनेर्योगं कर्म कारणमुच्यते।",
+          "transliteration": "ārurukṣor muner yogaṁ karma kāraṇam uchyate",
+          "hindi_translation": "योग की इच्छा करने वाले मुनि के लिए कर्म साधन कहा जाता है।",
+          "english_translation": "For the aspirant on the path of Yoga, action is said to be the means.",
+          "commentary": "Action is the foundation for the practice of meditation and spiritual development."
+        },
+        {
+          "verse_number": 5,
+          "sanskrit": "उद्धरेदात्मनाऽऽत्मानं नात्मानमवसादयेत्।",
+          "transliteration": "uddhared ātmanā 'ātmānaṁ nātmānam avasādayet",
+          "hindi_translation": "अपने आप को आत्मा से उन्नत करो, अपने आप को नीचा मत करो।",
+          "english_translation": "Elevate yourself through the power of the Self, do not degrade yourself.",
+          "commentary": "Self-reliance and self-effort are key to spiritual progress - no one can save you but yourself."
+        },
+        {
+          "verse_number": 6,
+          "sanskrit": "बन्धुरात्माऽऽत्मनस्तस्य येनाऽऽत्मैव आत्मना जितः।",
+          "transliteration": "bandhu rātmā 'ātmanas tasya yenā 'ātmaiv ātmanā jitaḥ",
+          "hindi_translation": "जिसने आत्मा को आत्मा से जीत लिया, वह स्वयं ही अपना मित्र है।",
+          "english_translation": "The Self is the friend of those who have mastered the Self by the Self.",
+          "commentary": "The Self that is controlled becomes one's greatest ally."
+        },
+        {
+          "verse_number": 7,
+          "sanskrit": "जितात्मनः प्रशान्तस्य परमात्मा समाहितः।",
+          "transliteration": "jitātmanaḥ praśāntasya paramātmā samāhitaḥ",
+          "hindi_translation": "जिसने आत्मा को जीत लिया, वह शांत है, और परमात्मा उसमें समाहित है।",
+          "english_translation": "For one who has conquered the Self and achieved peace, the Supreme Self is always present.",
+          "commentary": "The reward of self-mastery is the constant presence of the divine within."
+        },
+        {
+          "verse_number": 11,
+          "sanskrit": "शुचौ देशे प्रतिष्ठाप्य स्थिरमासनमात्मनः।",
+          "transliteration": "śuchau deśe pratiṣṭhāpya sthiram āsanam ātmanaḥ",
+          "hindi_translation": "शुद्ध स्थान पर दृढ़ आसन लगाकर।",
+          "english_translation": "In a clean place, having established a firm seat.",
+          "commentary": "The physical environment and posture are important for serious meditation practice."
+        },
+        {
+          "verse_number": 12,
+          "sanskrit": "तत्र तैकाग्र्यं मनः कृत्वा यतचित्तेन्द्रियक्रियः।",
+          "transliteration": "tatra taika-gryaṁ manaḥ kṛtvā yat-chittendiya-kriyaḥ",
+          "hindi_translation": "वहाँ मन को एकाग्र करके, मन और इंद्रियों को नियंत्रित करके।",
+          "english_translation": "There, fixing the mind on a single point and controlling the mind and senses.",
+          "commentary": "Concentration and control of the senses are prerequisites for meditation."
+        },
+        {
+          "verse_number": 15,
+          "sanskrit": "योगी यञ्जति मनः सर्वं कामकामा त्यजाय च।",
+          "transliteration": "yogī yañjati manaḥ sarvaṁ kāma-kāmā tyajāy cha",
+          "hindi_translation": "योगी सभी कामनाओं को त्यागकर मन को नियंत्रित करता है।",
+          "english_translation": "The yogi, controlling the mind, renounces all desires and concentrates the mind.",
+          "commentary": "The yogi must renounce even the desire for worldly possessions and pleasures."
+        },
+        {
+          "verse_number": 18,
+          "sanskrit": "यदा विनियतं चित्तमात्मन्येवावतिष्ठते।",
+          "transliteration": "yadā viniyataṁ chittam ātmany ev avatiṣṭhate",
+          "hindi_translation": "जब नियंत्रित चित्त आत्मा में ही लीन हो जाता है।",
+          "english_translation": "When the controlled mind becomes absorbed in the Self.",
+          "commentary": "The goal of meditation - the merger of individual consciousness with universal consciousness."
+        },
+        {
+          "verse_number": 19,
+          "sanskrit": "यथा दीपो निवातस्थो नेङ्गते सोपमा स्मृता।",
+          "transliteration": "yathā dīpo nivātas-tho neṅgate sopamā smṛtā",
+          "hindi_translation": "जैसे शांत स्थान पर दीप अचल रहता है, ऐसा ही योगी का चित्त रहता है।",
+          "english_translation": "As a lamp in a windless place does not flicker, such is the yogi with controlled mind.",
+          "commentary": "The simile of the steady lamp illustrating the stability of the meditative mind."
+        },
+        {
+          "verse_number": 20,
+          "sanskrit": "यत्रोपरमते चित्तं निरुद्धं योगसेवया।",
+          "transliteration": "yatroparamate chittaṁ niruddhaṁ yoga-sevayā",
+          "hindi_translation": "जहाँ योग के अभ्यास से चित्त की शांति हो जाती है।",
+          "english_translation": "Where the mind, withdrawn by yoga practice, attains complete rest.",
+          "commentary": "The state of nirvikalpa samadhi - meditation without any mental modifications."
+        },
+        {
+          "verse_number": 23,
+          "sanskrit": "तं विद्याद्दुःखसंयोगविप्रयोगं योगसञ्ज्ञितम्।",
+          "transliteration": "taṁ vidyād duḥkha-saṁyoga-viprayogaṁ yoga-sañjñitam",
+          "hindi_translation": "उस दुःख से अलगाव को योग कहते हैं।",
+          "english_translation": "That disassociation from suffering is called Yoga.",
+          "commentary": "The ultimate definition of Yoga - liberation from suffering through union with the Self."
+        },
+        {
+          "verse_number": 26,
+          "sanskrit": "यतो यतो निश्चरति मनश्चञ्चलमस्थिरम्।",
+          "transliteration": "yato yato niścharati manas chañchalam asthiram",
+          "hindi_translation": "जहाँ-जहाँ अस्थिर मन चंचल होकर भटकता है।",
+          "english_translation": "From wherever the restless and unsteady mind wanders.",
+          "commentary": "The challenge of meditation - bringing back the wandering mind to the present moment."
+        },
+        {
+          "verse_number": 27,
+          "sanskrit": "तस्मात्सर्वेषु कालेषु योगयुक्तो भवार्जुन।",
+          "transliteration": "tasmāt sarveṣu kāleṣu yoga-yukto bhav ārjun",
+          "hindi_translation": "इसलिए हे अर्जुन! सभी समय योग में लगे रहो।",
+          "english_translation": "Therefore, O Arjuna! Be always engaged in Yoga.",
+          "commentary": "Constant practice and vigilance are necessary for spiritual progress."
+        },
+        {
+          "verse_number": 29,
+          "sanskrit": "सर्वभूतात्मभूतात्मा सर्वभूतानि चात्मनि।",
+          "transliteration": "sarva-bhūtātmā-bhūtātmā sarva-bhūtāni chātmani",
+          "hindi_translation": "जो सभी प्राणियों में आत्मा को और आत्मा में सभी प्राणियों को देखता है।",
+          "english_translation": "The yogi sees the Self in all beings and all beings in the Self.",
+          "commentary": "The vision of universal oneness - the ultimate achievement of Yoga practice."
+        },
+        {
+          "verse_number": 31,
+          "sanskrit": "सर्वत्र समदर्शी यो मां पश्यति सर्वत्र।",
+          "transliteration": "sarvatra sama-darśī yo māṁ paśyati sarvatra",
+          "hindi_translation": "जो सब जगह समभाव से मुझे देखता है, और जो सब जगह मुझे देखता है।",
+          "english_translation": "The yogi who sees Me everywhere and perceives all in Me.",
+          "commentary": "Divine love and devotion combined with equanimity is the highest form of Yoga."
+        },
+        {
+          "verse_number": 32,
+          "sanskrit": "आत्मौपम्येन सर्वत्र समं पश्यति योऽर्जुन।",
+          "transliteration": "ātma-aupamyena sarvatra samaṁ paśyati yo 'rjun",
+          "hindi_translation": "हे अर्जुन! जो सब जगह आत्म-साम्य से समभाव से देखता है।",
+          "english_translation": "O Arjuna! The yogi who sees equality everywhere based on the analogy of the Self.",
+          "commentary": "The practical implication of yoga - universal love and compassion based on self-knowledge."
+        }
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Jnana Vijnana Yoga",
+      "chapter_name_hindi": "ज्ञान विज्ञान योग",
+      "chapter_summary": "Krishna reveals his divine nature and the cosmic manifestation. He describes how he is the source of all creation and the ultimate reality beyond all material existence.",
+      "verses": [
+        {
+          "verse_number": 1,
+          "sanskrit": "श्रीभगवानुवाच। मयि मनः समाधेय मयि बुद्धिं निवेशय।।",
+          "transliteration": "śrī bhagavān uvācha mayi manaḥ samādhey mayi buddhiṁ niveśay",
+          "hindi_translation": "श्रीभगवान ने कहा: मुझमें अपना मन लगाओ और मुझमें अपनी बुद्धि को समर्पित करो।",
+          "english_translation": "The Blessed Lord said: Fix your mind on Me, dedicate your intellect to Me.",
+          "commentary": "The path of devotion - complete surrender of mind and intellect to the divine."
+        },
+        {
+          "verse_number": 3,
+          "sanskrit": "न हि ज्ञानेन समं पवित्रमिह विद्यते।",
+          "transliteration": "na hi jñānena samaṁ pavitram iha vidyate",
+          "hindi_translation": "इस संसार में ज्ञान के समान पवित्र कुछ नहीं है।",
+          "english_translation": "There is nothing in this world as pure as knowledge.",
+          "commentary": "Knowledge is the supreme purifier and the path to ultimate liberation."
+        },
+        {
+          "verse_number": 8,
+          "sanskrit": "रसः अहं अप्सु कौन्तेय प्रभास्मि शशिसूर्ययोः।",
+          "transliteration": "rasaḥ ahaṁ apsu kauntey prabhāsmi śaśi-sūryayoḥ",
+          "hindi_translation": "हे कुंती के पुत्र! मैं जल में रस हूँ, सूर्य और चंद्र में प्रकाश हूँ।",
+          "english_translation": "O son of Kunti! I am the taste in water, the light in the sun and moon.",
+          "commentary": "Krishna describes his manifestation in all aspects of creation - the divine pervades all existence."
+        },
+        {
+          "verse_number": 10,
+          "sanskrit": "बीजं मां सर्वभूतानां विद्धि पार्थ सनातनम्।",
+          "transliteration": "bījaṁ māṁ sarva-bhūtānāṁ viddhi pārth sanātanam",
+          "hindi_translation": "हे पार्थ! मैं सभी प्राणियों का शाश्वत बीज हूँ।",
+          "english_translation": "O Partha! Know that I am the eternal seed of all beings.",
+          "commentary": "God is the ultimate source and sustaining principle of all existence."
+        },
+        {
+          "verse_number": 15,
+          "sanskrit": "न मां दुष्कृतिनो मूढाः प्रपद्यन्ते नराधमाः।",
+          "transliteration": "na māṁ duṣ-kṛtino mūḍhāḥ prapadyante narādhāmāḥ",
+          "hindi_translation": "दुष्कर्मी और मूर्ख मनुष्य मेरी शरण नहीं लेते।",
+          "english_translation": "The wicked and foolish do not surrender to Me.",
+          "commentary": "Spiritual progress requires ethical conduct and wisdom."
+        }
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Aksara Brahma Yoga",
+      "chapter_name_hindi": "अक्षर ब्रह्म योग",
+      "chapter_summary": "Krishna teaches about the ultimate reality and the process of liberation at the time of death. He explains how remembering him at the moment of death leads to liberation.",
+      "verses": [
+        {
+          "verse_number": 1,
+          "sanskrit": "अर्जुन उवाच। किं तद्ब्रह्म किमध्यात्मं किं कर्म पुरुषोत्तम।।",
+          "transliteration": "arjun uvācha kiṁ tad brahm kim adhyātmaṁ kiṁ karma puruṣottam",
+          "hindi_translation": "अर्जुन ने पूछा: हे पुरुषोत्तम! वह ब्रह्म क्या है, वह आत्मा क्या है?",
+          "english_translation": "Arjuna asked: O Supreme Person! What is Brahman, what is the Atman, what is action?",
+          "commentary": "Arjuna seeks clarification on the fundamental concepts of Brahman, Atman, and karma."
+        },
+        {
+          "verse_number": 3,
+          "sanskrit": "अक्षरं ब्रह्म परमं स्वभावोऽध्यात्ममुच्यते।",
+          "transliteration": "akṣaraṁ brahm paramaṁ sva-bhāvo 'dhyātmam uchyate",
+          "hindi_translation": "परब्रह्म अक्षर है, और आत्मा को स्वभाव कहते हैं।",
+          "english_translation": "The Supreme Brahman is imperishable. The nature of the individual being is called Adhyatma.",
+          "commentary": "Definition of fundamental concepts - Brahman as the absolute and Atman as individual consciousness."
+        },
+        {
+          "verse_number": 5,
+          "sanskrit": "अन्तकाले च मामेव स्मरन्मुक्त्वा कलेवरम्।",
+          "transliteration": "anta-kāle cha mām ev smaran muktvā kalevaram",
+          "hindi_translation": "अंत समय में जो मुझे स्मरण करते हुए शरीर को त्यागता है।",
+          "english_translation": "One who remembers Me at the time of death, leaving the body, attains My being.",
+          "commentary": "The importance of remembrance at the moment of death - it determines one's next birth."
+        },
+        {
+          "verse_number": 7,
+          "sanskrit": "तस्मात्सर्वेषु कालेषु मामनुस्मर युध्य च।।",
+          "transliteration": "tasmāt sarveṣu kāleṣu mām anusmar yudhy cha",
+          "hindi_translation": "इसलिए सभी समय मुझे स्मरण करते हुए कर्तव्य पालन करो।",
+          "english_translation": "Therefore, at all times remember Me and perform your duty.",
+          "commentary": "Constant remembrance of the divine combined with duty is the path to liberation."
+        }
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "chapter_name": "Raja Vidya Raja Guhya Yoga",
+      "chapter_name_hindi": "राज विद्या राज गुह्य योग",
+      "chapter_summary": "Krishna reveals the greatest knowledge and the supreme secret. He teaches about his transcendental nature and the method of devotion to reach him.",
+      "verses": [
+        {
+          "verse_number": 2,
+          "sanskrit": "राजविद्या राजगुह्यं पवित्रमिदमुत्तमम्।",
+          "transliteration": "rāja-vidyā rāja-guhyaṁ pavitram idam uttamam",
+          "hindi_translation": "यह राज-विद्या, राज-गुह्य, परम पवित्र और सर्वश्रेष्ठ है।",
+          "english_translation": "This is the royal science, the royal secret, most purifying and supreme.",
+          "commentary": "The knowledge of the divine is called the royal secret because it grants supreme power and peace."
+        },
+        {
+          "verse_number": 4,
+          "sanskrit": "मया ततमिदं सर्वं जगन्नव्यक्तमूर्तिना।",
+          "transliteration": "mayā tatam idaṁ sarvaṁ jagan avyakta-mūrtinā",
+          "hindi_translation": "मैं अव्यक्त रूप से इस संपूर्ण जगत को व्याप्त किए हुए हूँ।",
+          "english_translation": "I pervade this entire universe in My unmanifest form.",
+          "commentary": "The divine omnipresence - God is the substratum of all existence."
+        },
+        {
+          "verse_number": 22,
+          "sanskrit": "येषामहं प्रिय आत्मा तस्य ज्ञानिनां नित्ययुक्तानाम्।",
+          "transliteration": "yeṣām ahaṁ priya ātmā tasya jñāninām nitya-yuktānām",
+          "hindi_translation": "मैं उन ज्ञानियों का प्रिय हूँ जो मुझमें नित्य लगे हुए हैं।",
+          "english_translation": "I am the Self of the wise ones who are always united with Me.",
+          "commentary": "The intimate relationship between the divine and those who seek him with devotion and knowledge."
+        }
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "chapter_name": "Vibhuti Yoga",
+      "chapter_name_hindi": "विभूति योग",
+      "chapter_summary": "Krishna describes his divine manifestations and glories. He explains his presence in various forms and powers throughout creation.",
+      "verses": [
+        {
+          "verse_number": 8,
+          "sanskrit": "अहं सर्वस्य प्रभवो मत्तः सर्वं प्रवर्तते।",
+          "transliteration": "ahaṁ sarvasya prabhavo mattaḥ sarvaṁ pravartate",
+          "hindi_translation": "मैं सभी का मूल कारण हूँ, मुझसे सब कुछ उत्पन्न होता है।",
+          "english_translation": "I am the source of all. Everything emanates from Me. The wise know this and engage in My worship.",
+          "commentary": "God is the ultimate cause and sustaining principle of all existence."
+        },
+        {
+          "verse_number": 10,
+          "sanskrit": "मच्चित्ता मद्गतप्राणा बोधयन्तः परस्परम्।",
+          "transliteration": "mac-chittā mad-gata-prāṇā bodhayantaḥ parasparam",
+          "hindi_translation": "जिनका चित्त मुझमें लगा है, जिनका प्राण मुझमें समर्पित है।",
+          "english_translation": "Those whose minds are devoted to Me and whose lives are dedicated to Me.",
+          "commentary": "The characteristics of devoted followers - complete mental and physical dedication to the divine."
+        },
+        {
+          "verse_number": 20,
+          "sanskrit": "अहमात्मा गुडाकेश सर्वभूताशयस्थितः।",
+          "transliteration": "aham ātmā gudākeśa sarva-bhūtāśaya-sthitaḥ",
+          "hindi_translation": "हे गुडाकेश! मैं सभी प्राणियों के हृदय में स्थित आत्मा हूँ।",
+          "english_translation": "O Gudakesa! I am the Atman, the Self seated in the heart of all beings.",
+          "commentary": "The divine indwells in every being as the innermost Self."
+        }
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "chapter_name": "Vishwarupa Darshana Yoga",
+      "chapter_name_hindi": "विश्वरूप दर्शन योग",
+      "chapter_summary": "Krishna reveals his cosmic form to Arjuna. This chapter describes the magnificent vision of the universal form that encompasses all existence.",
+      "verses": [
+        {
+          "verse_number": 9,
+          "sanskrit": "अनेकबाहूरोवक्त्रनेत्रं पश्य मे योगमैश्वरम्।",
+          "transliteration": "aneka-bāhu-uro-vaktra-netram paśya me yogam aiśvaram",
+          "hindi_translation": "अनेक भुजाओं, पेटों, मुँहों और आँखों वाला मेरा योग देखो।",
+          "english_translation": "Behold, My divine yoga! Innumerable arms, bodies, mouths, and eyes!",
+          "commentary": "The cosmic form displays the infinite nature of the divine."
+        },
+        {
+          "verse_number": 19,
+          "sanskrit": "अनन्तविर्यामितविक्रमस्त्वं सर्वस्य लोकस्य परमं निधानम्।",
+          "transliteration": "ananta-viryām-ita-vikram astvam sarvasya lokasya paramaṁ nidhānam",
+          "hindi_translation": "अनंत शक्ति और अपरिमित विक्रम वाले तुम सभी लोकों का परम धन हो।",
+          "english_translation": "You are of infinite power and immeasurable prowess. You are the ultimate treasure of all worlds.",
+          "commentary": "Arjuna acknowledges the infinite and transcendent nature of the divine."
+        }
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "chapter_name": "Bhakti Yoga",
+      "chapter_name_hindi": "भक्ति योग",
+      "chapter_summary": "Krishna teaches that devotion is the path to the divine. He explains that those who are devoted to him with faith reach him.",
+      "verses": [
+        {
+          "verse_number": 2,
+          "sanskrit": "के योगवित्तमा एते योगिनामगणना मम।",
+          "transliteration": "ke yoga-vittamā ete yoginām agannā mam",
+          "hindi_translation": "ये योगी मेरे लिए सर्वश्रेष्ठ हैं?",
+          "english_translation": "Who among these yogis are most perfect, O Lord?",
+          "commentary": "Arjuna asks which path of yoga is the most excellent."
+        },
+        {
+          "verse_number": 3,
+          "sanskrit": "ये पि अक्षरमनिर्देश्यमव्यक्तं पर्युपासते।",
+          "transliteration": "ye pi akṣaram-anirddeśyam avyaktaṁ paryupāsate",
+          "hindi_translation": "जो अव्यक्त परब्रह्म की आराधना करते हैं।",
+          "english_translation": "Those who meditate on the unmanifest, imperishable Brahman.",
+          "commentary": "The path of abstract meditation on the formless ultimate reality."
+        },
+        {
+          "verse_number": 6,
+          "sanskrit": "ये तु सर्वाणि कर्माणि मयि संन्यस्य मत्परः।",
+          "transliteration": "ye tu sarvāṇi karmāṇi mayi sannyasya mat-paraḥ",
+          "hindi_translation": "जो सभी कर्मों को मुझमें अर्पित करके मुझ पर निर्भर रहते हैं।",
+          "english_translation": "Those who surrender all their actions to Me and are devoted to Me.",
+          "commentary": "The path of devotion and complete surrender is the simplest and most direct path."
+        },
+        {
+          "verse_number": 13,
+          "sanskrit": "अद्वेषा सर्वभूतानां मैत्रः करुण एव च।",
+          "transliteration": "adveṣā sarva-bhūtānāṁ maitraḥ karuṇa eva cha",
+          "hindi_translation": "जो सभी प्राणियों से निर्द्वेष, मित्रवत और करुणामय है।",
+          "english_translation": "One who is free from hatred toward all beings, compassionate and kind.",
+          "commentary": "The qualities of a true devotee - universal love and compassion."
+        }
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "chapter_name": "Kshetra Kshetragna Vibhaga Yoga",
+      "chapter_name_hindi": "क्षेत्र क्षेत्रज्ञ विभाग योग",
+      "chapter_summary": "Krishna explains the nature of the field (body) and the knower of the field (consciousness). He describes the twenty-five elements of nature.",
+      "verses": [
+        {
+          "verse_number": 3,
+          "sanskrit": "क्षेत्रज्ञं चापि मां विद्धि सर्वक्षेत्रेषु भारत।",
+          "transliteration": "kṣetra-jñaṁ chāpi māṁ viddhi sarva-kṣetreṣu bhārat",
+          "hindi_translation": "हे भारत! सभी क्षेत्रों (शरीरों) में मुझे क्षेत्रज्ञ जानो।",
+          "english_translation": "O Bharata! Know Me to be the Knower of the field in all bodies.",
+          "commentary": "The supreme consciousness is the witness and knower of all material bodies."
+        },
+        {
+          "verse_number": 12,
+          "sanskrit": "परमं ब्रह्म परमात्मा ज्योतिरेकम् तनुते।।",
+          "transliteration": "paramaṁ brahm paramātmā jyotir ekam tanute",
+          "hindi_translation": "परब्रह्म, परमात्मा, एकमात्र ज्योति है।",
+          "english_translation": "The Supreme Brahman, the Paramatman, is the single light of consciousness.",
+          "commentary": "The ultimate reality is singular, pure consciousness that illuminates all existence."
+        }
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "chapter_name": "Gunatraya Vibhaga Yoga",
+      "chapter_name_hindi": "गुणत्रय विभाग योग",
+      "chapter_summary": "Krishna explains the three gunas - Sattva, Rajas, and Tamas. He describes how these qualities of nature condition all beings.",
+      "verses": [
+        {
+          "verse_number": 5,
+          "sanskrit": "सत्त्वं रजस्तम इति गुणाः प्रकृतिसम्भवाः।",
+          "transliteration": "sattvaṁ rajas tam iti guṇāḥ prakṛti-sambhavāḥ",
+          "hindi_translation": "सत्त्व, रज और तम ये तीन गुण प्रकृति से उत्पन्न हैं।",
+          "english_translation": "Sattva, Rajas, and Tamas are the three qualities born of nature.",
+          "commentary": "All existence is composed of these three qualities in varying proportions."
+        },
+        {
+          "verse_number": 8,
+          "sanskrit": "राजोऽभिवर्धते कामैः तृष्णाभिरर्जुन।।",
+          "transliteration": "rājo 'bhivardhate kāmaiḥ tṛṣṇābhir arjun",
+          "hindi_translation": "हे अर्जुन! राजस गुण कामनाओं और तृष्णा से बढ़ता है।",
+          "english_translation": "O Arjuna! Rajas increases with desires and cravings.",
+          "commentary": "The quality of passion is sustained by unfulfilled desires and attachments."
+        }
+      ]
+    },
+    {
+      "chapter_number": 15,
+      "chapter_name": "Purushottama Yoga",
+      "chapter_name_hindi": "पुरुषोत्तम योग",
+      "chapter_summary": "Krishna describes himself as the supreme spirit beyond the perishable and imperishable. He teaches about the nature of the supreme reality.",
+      "verses": [
+        {
+          "verse_number": 1,
+          "sanskrit": "उर्ध्वमूलमध्:शाखमश्वत्थं प्राहुरव्ययम्।",
+          "transliteration": "ūrdhv-mūlam adhaḥ-śākhm aśvatthaṁ prāhur avyayam",
+          "hindi_translation": "ऊर्ध्व मूल और अधः शाखों वाले अश्वत्थ को अव्यय कहते हैं।",
+          "english_translation": "The eternal Ashvattha tree is said to have roots above and branches below.",
+          "commentary": "The cosmic tree metaphor representing the creation with the divine as the root."
+        },
+        {
+          "verse_number": 18,
+          "sanskrit": "यस्मात्क्षरमतीतोऽहमक्षरादपि चोत्तमः।",
+          "transliteration": "yasmāt kṣaram atīto 'ham akṣarād api chottamaḥ",
+          "hindi_translation": "चूँकि मैं क्षर से परे हूँ और अक्षर से भी श्रेष्ठ हूँ।",
+          "english_translation": "Since I am superior to both the perishable and the imperishable.",
+          "commentary": "Krishna's supreme position as beyond all categories of existence."
+        }
+      ]
+    },
+    {
+      "chapter_number": 16,
+      "chapter_name": "Daivasura Sampad Vibhaga Yoga",
+      "chapter_name_hindi": "दैवासुर सम्पद विभाग योग",
+      "chapter_summary": "Krishna divides qualities into divine and demonic. He explains the characteristics that lead to liberation and those that lead to bondage.",
+      "verses": [
+        {
+          "verse_number": 1,
+          "sanskrit": "अभयं सत्त्वसंशुद्धिर्ज्ञानयोगव्यवस्थितिः।",
+          "transliteration": "abhayaṁ sattva-saṁśuddhir jñāna-yoga-vyavasthitiḥ",
+          "hindi_translation": "अभय, सत्त्व की शुद्धि, ज्ञान-योग में स्थिति - ये दैव सम्पदा हैं।",
+          "english_translation": "Fearlessness, purity of heart, steadfastness in knowledge and yoga are divine qualities.",
+          "commentary": "The divine qualities lead to spiritual progress and ultimate liberation."
+        },
+        {
+          "verse_number": 7,
+          "sanskrit": "दैवी सम्पद्विमोक्षाय निबन्धनाय तामसी।।",
+          "transliteration": "daivī sampad vimokṣāya nibandhānaā tāmasī",
+          "hindi_translation": "दैव सम्पद मोक्ष के लिए है, आसुरी सम्पद बंधन के लिए है।",
+          "english_translation": "Divine qualities lead to liberation, demonic qualities lead to bondage.",
+          "commentary": "The two paths - one leads to freedom, the other to slavery."
+        }
+      ]
+    },
+    {
+      "chapter_number": 17,
+      "chapter_name": "Shraddhatraya Vibhaga Yoga",
+      "chapter_name_hindi": "श्रद्धात्रय विभाग योग",
+      "chapter_summary": "Krishna discusses the three types of faith corresponding to the three gunas. He explains how faith is the basis of all actions.",
+      "verses": [
+        {
+          "verse_number": 3,
+          "sanskrit": "श्रद्धामयोऽयं पुरुषो यो यच्छ्रद्धः स एव सः।",
+          "transliteration": "śraddhā-mayo 'yaṁ puruṣo yo yac-chraddhah sa eva saḥ",
+          "hindi_translation": "जैसा श्रद्धा का व्यक्ति, वह वैसा ही है।",
+          "english_translation": "A person is made of the stuff of his faith. As his faith is, so is he.",
+          "commentary": "Faith is the determining factor of a person's character and spiritual development."
+        },
+        {
+          "verse_number": 28,
+          "sanskrit": "श्रद्धया परया तप्तं तपस्तत्त्रिविधं नरैः।",
+          "transliteration": "śraddhayā parayā taptaṁ tapas tat-trividhaṁ naraiḥ",
+          "hindi_translation": "परम श्रद्धा से किया गया तप तीन प्रकार का है।",
+          "english_translation": "Austerity practiced with supreme faith is of three types.",
+          "commentary": "The quality of austerity and spiritual practice depends on the faith with which it is performed."
+        }
+      ]
+    },
+    {
+      "chapter_number": 18,
+      "chapter_name": "Moksha Sanyasa Yoga",
+      "chapter_name_hindi": "मोक्ष सन्यास योग",
+      "chapter_summary": "The final chapter concludes the Bhagavad Gita with Krishna explaining the nature of renunciation and the path to ultimate liberation.",
+      "verses": [
+        {
+          "verse_number": 2,
+          "sanskrit": "इच्छाद्वेषसमुत्थेभ्यु कामक्रोधोद्भवं मदेः।",
+          "transliteration": "ichchhā-dveṣa-samutthebhyu kāma-krodhodbhavaṁ madeḥ",
+          "hindi_translation": "इच्छा और द्वेष से उत्पन्न काम और क्रोध को त्यागना ही संन्यास है।",
+          "english_translation": "True renunciation is the renunciation of desire and aversion born from attraction and repulsion.",
+          "commentary": "The essence of renunciation is freedom from emotional reactions and attachments."
+        },
+        {
+          "verse_number": 65,
+          "sanskrit": "सर्वधर्मान्परित्यज्य मामेकं शरणं ब्रज।",
+          "transliteration": "sarva-dharmān parityajya mām ekaṁ śaraṇaṁ braj",
+          "hindi_translation": "सभी धर्मों को त्यागकर, केवल मेरी शरण लो।",
+          "english_translation": "Abandoning all dharmas, surrender to Me alone.",
+          "commentary": "The final teaching - complete surrender to the divine is the ultimate path to liberation."
+        },
+        {
+          "verse_number": 66,
+          "sanskrit": "अहं त्वां सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः।।",
+          "transliteration": "ahaṁ tvāṁ sarva-pāpebhyo mokṣayiṣyāmi mā śucaḥ",
+          "hindi_translation": "मैं तुम्हें सभी पापों से मुक्त कर दूँगा। चिंता मत करो।",
+          "english_translation": "I shall liberate you from all sins. Do not grieve.",
+          "commentary": "The promise of divine grace and redemption - complete liberation through surrender."
+        },
+        {
+          "verse_number": 73,
+          "sanskrit": "अर्जुनः प्रह्र्ष्टः सुप्रेमो भयं च परमं गतः।।",
+          "transliteration": "arjunaḥ prahṛṣṭaḥ supremo bhayaṁ cha paramaṁ gataḥ",
+          "hindi_translation": "अर्जुन अत्यंत प्रसन्न हुआ और उसका सभी भय दूर हो गया।",
+          "english_translation": "Arjuna was completely pleased and all his doubts and fears were removed.",
+          "commentary": "The resolution of Arjuna's crisis through the wisdom of Krishna."
+        }
+      ]
+    }
+  ]
+}

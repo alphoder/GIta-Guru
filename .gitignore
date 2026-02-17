@@ -1,0 +1,26 @@
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+gita-agent/venv/
+
+# Secrets / local config
+.env
+gita-agent/.env
+
+# App data / local databases
+gita-agent/chroma_db/
+
+# IDE
+.vscode/
+.idea/
+
