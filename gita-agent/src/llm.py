@@ -1,16 +1,19 @@
 """
-LLM setup — supports both Ollama (free/local) and Anthropic Claude (API).
+LLM setup — supports Ollama (local), Anthropic Claude, and OpenAI.
 Switch between them by changing LLM_PROVIDER in config or .env.
 """
 
 from langchain_community.llms import Ollama
 from langchain_anthropic import ChatAnthropic
+from langchain_openai import ChatOpenAI
 from src.config import (
     LLM_PROVIDER,
     OLLAMA_MODEL,
     OLLAMA_BASE_URL,
     ANTHROPIC_API_KEY,
     ANTHROPIC_MODEL,
+    OPENAI_API_KEY,
+    OPENAI_MODEL,
     TEMPERATURE,
     MAX_TOKENS,
 )
@@ -21,6 +24,7 @@ def get_llm():
     Return the configured LLM instance.
     - 'ollama'    → local Ollama server (free, no internet needed)
     - 'anthropic' → Anthropic Claude API (requires API key)
+    - 'openai'    → OpenAI API (requires API key)
     """
     provider = LLM_PROVIDER.lower().strip()
 
@@ -46,7 +50,21 @@ def get_llm():
             max_tokens=MAX_TOKENS,
         )
 
+    elif provider == "openai":
+        if not OPENAI_API_KEY:
+            raise ValueError(
+                "OPENAI_API_KEY is not set. "
+                "Add it to your .env file or export it as an environment variable."
+            )
+        print(f"[LLM] Using OpenAI — model: {OPENAI_MODEL}")
+        return ChatOpenAI(
+            model=OPENAI_MODEL,
+            openai_api_key=OPENAI_API_KEY,
+            temperature=TEMPERATURE,
+            max_tokens=MAX_TOKENS,
+        )
+
     else:
         raise ValueError(
-            f"Unknown LLM_PROVIDER '{LLM_PROVIDER}'. Use 'ollama' or 'anthropic'."
+            f"Unknown LLM_PROVIDER '{LLM_PROVIDER}'. Use 'ollama', 'anthropic', or 'openai'."
         )

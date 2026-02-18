@@ -59,11 +59,14 @@ with st.sidebar:
     st.title("⚙️ Settings")
 
     # LLM selection
+    _provider_options = ["openai", "ollama", "anthropic"]
+    _current = st.session_state.llm_provider
+    _index = _provider_options.index(_current) if _current in _provider_options else 0
     provider = st.selectbox(
         "LLM Provider",
-        options=["ollama", "anthropic"],
-        index=0 if st.session_state.llm_provider == "ollama" else 1,
-        help="Ollama = free/local, Anthropic = Claude API (needs key)",
+        options=_provider_options,
+        index=_index,
+        help="OpenAI = GPT-4o API, Ollama = free/local, Anthropic = Claude API",
     )
     st.session_state.llm_provider = provider
 
