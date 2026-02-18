@@ -36,6 +36,12 @@ html, body, [class*="css"] {
 footer {visibility: hidden;}
 header {visibility: hidden;}
 
+/* ── Keep the sidebar collapse/expand toggle always visible ── */
+[data-testid="collapsedControl"] {
+    visibility: visible !important;
+    display: flex !important;
+}
+
 /* ── Hero header ── */
 .hero {
     background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
