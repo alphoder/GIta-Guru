@@ -1,23 +1,23 @@
 """
-LLM setup — Google Gemini via langchain-google-genai.
+LLM setup — Groq (free, fast inference) via langchain-groq.
 """
 
-from langchain_google_genai import ChatGoogleGenerativeAI
-from src.config import GOOGLE_API_KEY, GEMINI_MODEL, TEMPERATURE, MAX_TOKENS
+from langchain_groq import ChatGroq
+from src.config import GROQ_API_KEY, GROQ_MODEL, TEMPERATURE, MAX_TOKENS
 
 
-def get_llm() -> ChatGoogleGenerativeAI:
-    """Return a ChatGoogleGenerativeAI instance using the configured model and key."""
-    if not GOOGLE_API_KEY:
+def get_llm() -> ChatGroq:
+    """Return a ChatGroq instance using the configured model and key."""
+    if not GROQ_API_KEY:
         raise ValueError(
-            "GOOGLE_API_KEY is not set. "
-            "Get your key at https://aistudio.google.com/app/apikey "
+            "GROQ_API_KEY is not set. "
+            "Get your free key at https://console.groq.com/keys "
             "and add it to your .env file."
         )
-    print(f"[LLM] Using Google Gemini — model: {GEMINI_MODEL}")
-    return ChatGoogleGenerativeAI(
-        model=GEMINI_MODEL,
-        google_api_key=GOOGLE_API_KEY,
+    print(f"[LLM] Using Groq — model: {GROQ_MODEL}")
+    return ChatGroq(
+        model=GROQ_MODEL,
+        groq_api_key=GROQ_API_KEY,
         temperature=TEMPERATURE,
-        max_output_tokens=MAX_TOKENS,
+        max_tokens=MAX_TOKENS,
     )
