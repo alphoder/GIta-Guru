@@ -14,9 +14,9 @@ DATA_DIR = BASE_DIR / "data"
 GITA_JSON_PATH = DATA_DIR / "bhagavad_gita.json"
 PSYCHOLOGY_JSON_PATH = DATA_DIR / "psychology_books.json"
 
-# ── OpenAI settings ────────────────────────────────────────────
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
+# ── Gemini settings ────────────────────────────────────────────
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
 
 # ── Embedding settings ─────────────────────────────────────────
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"

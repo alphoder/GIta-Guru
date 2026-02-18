@@ -1,22 +1,23 @@
 """
-LLM setup — OpenAI via langchain-openai.
+LLM setup — Google Gemini via langchain-google-genai.
 """
 
-from langchain_openai import ChatOpenAI
-from src.config import OPENAI_API_KEY, OPENAI_MODEL, TEMPERATURE, MAX_TOKENS
+from langchain_google_genai import ChatGoogleGenerativeAI
+from src.config import GOOGLE_API_KEY, GEMINI_MODEL, TEMPERATURE, MAX_TOKENS
 
 
-def get_llm() -> ChatOpenAI:
-    """Return a ChatOpenAI instance using the configured model and key."""
-    if not OPENAI_API_KEY:
+def get_llm() -> ChatGoogleGenerativeAI:
+    """Return a ChatGoogleGenerativeAI instance using the configured model and key."""
+    if not GOOGLE_API_KEY:
         raise ValueError(
-            "OPENAI_API_KEY is not set. "
-            "Add it to your .env file or set it as an environment variable."
+            "GOOGLE_API_KEY is not set. "
+            "Get your key at https://aistudio.google.com/app/apikey "
+            "and add it to your .env file."
         )
-    print(f"[LLM] Using OpenAI — model: {OPENAI_MODEL}")
-    return ChatOpenAI(
-        model=OPENAI_MODEL,
-        openai_api_key=OPENAI_API_KEY,
+    print(f"[LLM] Using Google Gemini — model: {GEMINI_MODEL}")
+    return ChatGoogleGenerativeAI(
+        model=GEMINI_MODEL,
+        google_api_key=GOOGLE_API_KEY,
         temperature=TEMPERATURE,
-        max_tokens=MAX_TOKENS,
+        max_output_tokens=MAX_TOKENS,
     )
