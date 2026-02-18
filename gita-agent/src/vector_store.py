@@ -26,9 +26,12 @@ def similarity_search(query: str, k: int = TOP_K_RESULTS) -> list:
 
 
 def get_retriever(k: int = TOP_K_RESULTS):
-    """Return a LangChain retriever backed by ChromaDB."""
+    """Return a LangChain retriever using MMR for diverse results."""
     store = get_vector_store()
-    return store.as_retriever(search_kwargs={"k": k})
+    return store.as_retriever(
+        search_type="mmr",
+        search_kwargs={"k": k, "fetch_k": k * 4, "lambda_mult": 0.5},
+    )
 
 
 def reset_vector_store():
