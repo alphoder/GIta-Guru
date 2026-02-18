@@ -1,7 +1,7 @@
 # Core Framework
 langchain>=0.2.0
 langchain-community>=0.2.0
-langchain-anthropic>=0.1.0
+langchain-openai>=0.1.0
 
 # Vector Database
 chromadb>=0.4.0
@@ -9,9 +9,7 @@ chromadb>=0.4.0
 # Embeddings
 sentence-transformers>=2.2.0
 
-# LLM Providers
-anthropic>=0.25.0
-langchain-openai>=0.1.0
+# LLM Provider
 openai>=1.0.0
 
 # Frontend

@@ -19,11 +19,10 @@ def _extract_cited_verses(chat_history: list) -> set:
     cited = set()
     if not chat_history:
         return cited
+    import re
     for msg in chat_history:
         if msg["role"] == "assistant":
             content = msg["content"]
-            # Look for patterns like "Chapter 2, Verse 47" or "2.47"
-            import re
             for match in re.finditer(r"Chapter\s+(\d+),?\s*Verse\s+(\d+)", content, re.IGNORECASE):
                 cited.add(f"{match.group(1)}.{match.group(2)}")
             for match in re.finditer(r"(\d+)\.(\d+)", content):
@@ -33,7 +32,6 @@ def _extract_cited_verses(chat_history: list) -> set:
 
 def ask_gita(
     question: str,
-    llm_provider: str = None,
     chat_history: list = None,
     user_profile: dict = None,
 ) -> dict:
@@ -41,10 +39,6 @@ def ask_gita(
     Ask GitaGuru a question with full conversational context.
     Avoids repeating verses already cited in the conversation.
     """
-    if llm_provider:
-        import src.config as cfg
-        cfg.LLM_PROVIDER = llm_provider
-
     store = get_vector_store()
     llm = get_llm()
 

@@ -14,7 +14,7 @@ import streamlit as st
 PROJECT_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.config import GITA_JSON_PATH, LLM_PROVIDER
+from src.config import GITA_JSON_PATH
 from src.chain import ask_gita
 
 # ── Page config ────────────────────────────────────────────────
@@ -44,8 +44,6 @@ def get_random_verse():
 # ── Session state init ─────────────────────────────────────────
 if "messages" not in st.session_state:
     st.session_state.messages = []
-if "llm_provider" not in st.session_state:
-    st.session_state.llm_provider = LLM_PROVIDER
 if "language" not in st.session_state:
     st.session_state.language = "English"
 if "verse_of_day" not in st.session_state:
@@ -57,18 +55,6 @@ if "user_profile" not in st.session_state:
 # ── Sidebar ────────────────────────────────────────────────────
 with st.sidebar:
     st.title("⚙️ Settings")
-
-    # LLM selection
-    _provider_options = ["openai", "ollama", "anthropic"]
-    _current = st.session_state.llm_provider
-    _index = _provider_options.index(_current) if _current in _provider_options else 0
-    provider = st.selectbox(
-        "LLM Provider",
-        options=_provider_options,
-        index=_index,
-        help="OpenAI = GPT-4o API, Ollama = free/local, Anthropic = Claude API",
-    )
-    st.session_state.llm_provider = provider
 
     # Language preference
     st.session_state.language = st.selectbox(
@@ -180,7 +166,6 @@ if question:
             try:
                 result = ask_gita(
                     question=question,
-                    llm_provider=st.session_state.llm_provider,
                     chat_history=st.session_state.messages,
                     user_profile=st.session_state.user_profile,
                 )

@@ -1,6 +1,5 @@
 """
 Configuration for GitaGuru — Bhagavad Gita AI Agent.
-Centralizes all settings: LLM provider, model params, paths, and retrieval tuning.
 """
 
 import os
@@ -15,18 +14,7 @@ DATA_DIR = BASE_DIR / "data"
 GITA_JSON_PATH = DATA_DIR / "bhagavad_gita.json"
 PSYCHOLOGY_JSON_PATH = DATA_DIR / "psychology_books.json"
 
-# ── LLM Provider: "ollama", "anthropic", or "openai" ───────────
-LLM_PROVIDER = os.getenv("LLM_PROVIDER", "ollama")
-
-# Ollama settings
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3")
-OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
-
-# Anthropic settings
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
-ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-20250514")
-
-# OpenAI settings
+# ── OpenAI settings ────────────────────────────────────────────
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 
