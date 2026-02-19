@@ -23,120 +23,309 @@ st.set_page_config(
     layout="centered",
 )
 
-# ── Custom CSS ────────────────────────────────────────────────
-st.markdown("""
+# ── Session state defaults ─────────────────────────────────────
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+if "language" not in st.session_state:
+    st.session_state.language = "English"
+if "verse_of_day" not in st.session_state:
+    st.session_state.verse_of_day = None  # set after gita_data loads
+if "user_profile" not in st.session_state:
+    st.session_state.user_profile = {"name": "", "situation": "", "mood": ""}
+if "dark_mode" not in st.session_state:
+    st.session_state.dark_mode = True  # dark by default
+
+
+# ── Theme palette ──────────────────────────────────────────────
+def get_theme_css(dark: bool) -> str:
+    """Return the full CSS block for the chosen theme."""
+
+    if dark:
+        main_bg = "linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)"
+        sidebar_bg = "linear-gradient(180deg, #1a0533 0%, #0d1f2d 100%)"
+        text_primary = "#e8e0f0"
+        text_muted = "#9a8cbf"
+        card_hover_bg = "rgba(255,255,255,0.10)"
+        mood_card_bg = "rgba(107, 79, 160, 0.18)"
+        mood_card_border = "rgba(107, 79, 160, 0.35)"
+        mood_card_text = "#d4c6f0"
+        tip_bg = "rgba(17, 153, 142, 0.12)"
+        tip_border = "rgba(17, 153, 142, 0.30)"
+        tip_text = "#7ee8d8"
+        source_bg = "rgba(17, 153, 142, 0.10)"
+        source_border = "#11998e"
+        source_text = "#7ee8d8"
+        input_bg = "rgba(255,255,255,0.06)"
+        input_border = "rgba(255,255,255,0.12)"
+        input_text = "#e8e0f0"
+        scrollbar_thumb = "rgba(107,79,160,0.4)"
+    else:
+        main_bg = "linear-gradient(135deg, #f5f0ff 0%, #eef9f6 50%, #f0e6ff 100%)"
+        sidebar_bg = "linear-gradient(180deg, #3d1d72 0%, #1a8a7e 100%)"
+        text_primary = "#1a1a2e"
+        text_muted = "#7a7a9a"
+        card_hover_bg = "rgba(255,255,255,0.95)"
+        mood_card_bg = "rgba(107, 79, 160, 0.08)"
+        mood_card_border = "rgba(107, 79, 160, 0.20)"
+        mood_card_text = "#5a3e8a"
+        tip_bg = "rgba(17, 153, 142, 0.08)"
+        tip_border = "rgba(17, 153, 142, 0.25)"
+        tip_text = "#0d5952"
+        source_bg = "rgba(17, 153, 142, 0.06)"
+        source_border = "#11998e"
+        source_text = "#0d5952"
+        input_bg = "rgba(255,255,255,0.70)"
+        input_border = "rgba(45, 27, 105, 0.15)"
+        input_text = "#1a1a2e"
+        scrollbar_thumb = "rgba(107,79,160,0.25)"
+
+    return f"""
 <style>
+/* ═══════════════════════════════════════════
+   MindGita Theme — {"Dark" if dark else "Light"} Mode
+   ═══════════════════════════════════════════ */
+
 /* ── Global ── */
-html, body, [class*="css"] {
-    font-family: 'Segoe UI', sans-serif;
-}
+html, body, [class*="css"] {{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.4s ease, color 0.4s ease;
+}}
 
-/* ── Hide default Streamlit header/footer ── */
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
+/* ── Main area background ── */
+.stApp {{
+    background: {main_bg};
+    background-attachment: fixed;
+}}
+.stApp > header {{
+    background: transparent !important;
+}}
 
-/* ── Keep the sidebar collapse/expand toggle always visible ── */
-[data-testid="collapsedControl"] {
+/* ── Hide Streamlit chrome ── */
+#MainMenu {{visibility: hidden;}}
+footer {{visibility: hidden;}}
+/* [data-testid="stHeader"] {{visibility: hidden; height: 0; position: fixed;}} */
+/* Commented out above line to avoid hiding main header and controls */
+[data-testid="collapsedControl"] {{
     visibility: visible !important;
     display: flex !important;
-}
+    color: white !important;
+}}
 
-/* ── Hero header ── */
-.hero {
-    background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
-    border-radius: 16px;
-    padding: 28px 32px 20px 32px;
-    margin-bottom: 20px;
+/* ── Scrollbar ── */
+::-webkit-scrollbar {{ width: 6px; }}
+::-webkit-scrollbar-track {{ background: transparent; }}
+::-webkit-scrollbar-thumb {{ background: {scrollbar_thumb}; border-radius: 3px; }}
+
+/* ── Text colours — Main area ── */
+.stApp .stMarkdown, .stApp .stMarkdown p,
+.stApp .stMarkdown li, .stApp .stMarkdown span {{
+    color: {text_primary} !important;
+}}
+.stApp .stMarkdown h1, .stApp .stMarkdown h2, .stApp .stMarkdown h3 {{
+    color: {text_primary} !important;
+}}
+.stApp .stCaption {{
+    color: {text_muted} !important;
+}}
+
+/* ── SIDEBAR ── */
+section[data-testid="stSidebar"] {{
+    background: {sidebar_bg};
+    border-right: 1px solid rgba(255,255,255,0.08);
+}}
+section[data-testid="stSidebar"] .stMarkdown,
+section[data-testid="stSidebar"] .stMarkdown p,
+section[data-testid="stSidebar"] .stMarkdown h1,
+section[data-testid="stSidebar"] .stMarkdown h2,
+section[data-testid="stSidebar"] .stMarkdown h3,
+section[data-testid="stSidebar"] .stMarkdown li,
+section[data-testid="stSidebar"] .stMarkdown strong,
+section[data-testid="stSidebar"] .stMarkdown em,
+section[data-testid="stSidebar"] .stMarkdown span,
+section[data-testid="stSidebar"] .stCaption,
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] [data-testid="stExpanderToggleDetails"] {{
+    color: #e2d9f3 !important;
+}}
+section[data-testid="stSidebar"] .stSelectbox label,
+section[data-testid="stSidebar"] .stTextInput label,
+section[data-testid="stSidebar"] .stTextArea label {{
+    color: #c4b5e0 !important;
+    font-size: 0.82rem !important;
+}}
+section[data-testid="stSidebar"] hr {{
+    border-color: rgba(107, 79, 160, 0.30) !important;
+}}
+section[data-testid="stSidebar"] .stButton button {{
+    background: rgba(107, 79, 160, 0.30) !important;
+    border: 1px solid rgba(107, 79, 160, 0.50) !important;
+    color: #e2d9f3 !important;
+    border-radius: 10px !important;
+    font-size: 0.82rem !important;
+    transition: all 0.25s ease !important;
+    backdrop-filter: blur(8px) !important;
+}}
+section[data-testid="stSidebar"] .stButton button:hover {{
+    background: rgba(107, 79, 160, 0.50) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 15px rgba(107, 79, 160, 0.25) !important;
+}}
+section[data-testid="stSidebar"] [data-testid="stToggle"] label span {{
+    color: #e2d9f3 !important;
+}}
+section[data-testid="stSidebar"] .streamlit-expanderHeader {{
+    color: #e2d9f3 !important;
+    background: rgba(107, 79, 160, 0.15) !important;
+    border-radius: 10px !important;
+}}
+
+/* ── HERO HEADER ── */
+.hero {{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #11998e 100%);
+    background-size: 200% 200%;
+    animation: heroShift 8s ease infinite;
+    border-radius: 18px;
+    padding: 32px 36px 24px 36px;
+    margin-bottom: 22px;
     text-align: center;
     color: white;
-}
-.hero h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.25);
+    position: relative;
+    overflow: hidden;
+}}
+.hero::before {{
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.08);
+    border-radius: 18px;
+}}
+.hero h1 {{
+    font-size: 2.4rem;
+    font-weight: 800;
     margin: 0 0 6px 0;
     letter-spacing: -0.5px;
-}
-.hero p {
-    font-size: 1rem;
-    opacity: 0.88;
+    position: relative;
+    color: white !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}}
+.hero p {{
+    font-size: 1.05rem;
+    opacity: 0.92;
     margin: 0;
-}
+    position: relative;
+    color: rgba(255,255,255,0.92) !important;
+    font-weight: 400;
+}}
+@keyframes heroShift {{
+    0% {{ background-position: 0% 50%; }}
+    50% {{ background-position: 100% 50%; }}
+    100% {{ background-position: 0% 50%; }}
+}}
 
-/* ── Mood card ── */
-.mood-card {
-    background: #f8f4ff;
-    border: 1px solid #e2d9f3;
-    border-radius: 12px;
+/* ── MOOD CARD ── */
+.mood-card {{
+    background: {mood_card_bg};
+    border: 1px solid {mood_card_border};
+    border-radius: 14px;
     padding: 14px 18px;
     margin-bottom: 18px;
     text-align: center;
-}
-.mood-card p {
-    font-size: 0.88rem;
-    color: #6b5b95;
-    margin: 0 0 8px 0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}}
+.mood-card:hover {{
+    background: {card_hover_bg};
+}}
+.mood-card p {{
+    font-size: 0.9rem;
+    color: {mood_card_text} !important;
+    margin: 0;
     font-weight: 600;
     letter-spacing: 0.3px;
-}
+}}
 
-/* ── Chat message bubbles ── */
-[data-testid="stChatMessage"] {
-    border-radius: 12px;
-    padding: 4px;
-    margin-bottom: 4px;
-}
+/* ── TIP BOX (welcome) ── */
+.tip-box {{
+    background: {tip_bg};
+    border: 1px solid {tip_border};
+    border-radius: 14px;
+    padding: 16px 20px;
+    font-size: 0.88rem;
+    color: {tip_text} !important;
+    margin-top: 8px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    line-height: 1.6;
+}}
+.tip-box b {{
+    color: {tip_text} !important;
+}}
 
-/* ── Source cards ── */
-.source-card {
-    background: #f0fdf4;
-    border-left: 3px solid #11998e;
-    border-radius: 8px;
-    padding: 8px 12px;
-    margin: 4px 0;
-    font-size: 0.82rem;
-    color: #166534;
-}
-
-/* ── Sidebar styling ── */
-section[data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #1a0533 0%, #0d1f2d 100%);
-}
-section[data-testid="stSidebar"] * {
-    color: #e2d9f3 !important;
-}
-section[data-testid="stSidebar"] .stSelectbox label,
-section[data-testid="stSidebar"] .stTextInput label,
-section[data-testid="stSidebar"] .stTextArea label {
-    color: #c4b5e0 !important;
-    font-size: 0.82rem !important;
-}
-section[data-testid="stSidebar"] hr {
-    border-color: #3d2b6b !important;
-}
-section[data-testid="stSidebar"] .stButton button {
-    background: #3d2b6b !important;
-    border: 1px solid #6b4fa0 !important;
-    color: #e2d9f3 !important;
-    border-radius: 8px !important;
-    font-size: 0.82rem !important;
-}
-section[data-testid="stSidebar"] .stButton button:hover {
-    background: #5a3e8a !important;
-}
-
-/* ── Wellness tip box ── */
-.tip-box {
-    background: rgba(17,153,142,0.12);
-    border: 1px solid rgba(17,153,142,0.3);
+/* ── SOURCE CARDS ── */
+.source-card {{
+    background: {source_bg};
+    border-left: 3px solid {source_border};
     border-radius: 10px;
     padding: 10px 14px;
-    font-size: 0.82rem;
-    color: #0d5952;
-    margin-top: 8px;
-}
+    margin: 6px 0;
+    font-size: 0.84rem;
+    color: {source_text} !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.25s ease;
+}}
+.source-card:hover {{
+    transform: translateX(4px);
+}}
+.source-card i {{
+    color: {source_text} !important;
+}}
+
+/* ── CHAT MESSAGES ── */
+[data-testid="stChatMessage"] {{
+    border-radius: 14px;
+    padding: 6px;
+    margin-bottom: 6px;
+    transition: all 0.3s ease;
+}}
+
+/* ── CHAT INPUT ── */
+[data-testid="stChatInput"] textarea {{
+    background: {input_bg} !important;
+    border: 1px solid {input_border} !important;
+    border-radius: 14px !important;
+    color: {input_text} !important;
+    transition: all 0.3s ease !important;
+}}
+[data-testid="stChatInput"] textarea:focus {{
+    border-color: #667eea !important;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.20) !important;
+}}
+
+/* ── Streamlit widget overrides — main area ── */
+.stApp .stTextInput input,
+.stApp .stTextArea textarea,
+.stApp .stSelectbox > div > div {{
+    background: {input_bg} !important;
+    border-color: {input_border} !important;
+    color: {input_text} !important;
+    border-radius: 10px !important;
+}}
+
+/* ── Fade-in animation ── */
+@keyframes fadeIn {{
+    from {{ opacity: 0; transform: translateY(10px); }}
+    to {{ opacity: 1; transform: translateY(0); }}
+}}
+.hero, .mood-card, .tip-box {{
+    animation: fadeIn 0.5s ease-out;
+}}
+
 </style>
-""", unsafe_allow_html=True)
+"""
+
 
 # ── Load Gita data ─────────────────────────────────────────────
 @st.cache_data
@@ -152,21 +341,24 @@ def get_random_verse():
     verse = random.choice(chapter["verses"])
     return chapter, verse
 
-# ── Session state ──────────────────────────────────────────────
-if "messages" not in st.session_state:
-    st.session_state.messages = []
-if "language" not in st.session_state:
-    st.session_state.language = "English"
-if "verse_of_day" not in st.session_state:
+# init verse of day after gita data loads
+if st.session_state.verse_of_day is None:
     ch, v = get_random_verse()
     st.session_state.verse_of_day = (ch, v)
-if "user_profile" not in st.session_state:
-    st.session_state.user_profile = {"name": "", "situation": "", "mood": ""}
+
 
 # ── Sidebar ────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("### 🧘 MindGita")
     st.caption("Your AI Wellness Companion")
+    st.divider()
+
+    # Theme toggle
+    st.session_state.dark_mode = st.toggle(
+        "🌙 Dark Mode",
+        value=st.session_state.dark_mode,
+    )
+
     st.divider()
 
     # Mood check-in
@@ -216,7 +408,7 @@ with st.sidebar:
     st.markdown("**📖 Gita Verse of the Day**")
     ch, v = st.session_state.verse_of_day
     st.markdown(f"*Ch. {ch['chapter_number']}, Verse {v['verse_number']} — {ch['chapter_name']}*")
-    st.markdown(f"> _{v.get('sanskrit', ''[:60])}_")
+    st.markdown(f"> _{v.get('sanskrit', '')[:60]}_")
     st.caption(v["english_translation"][:180] + "...")
     if st.button("🔄 New Verse", use_container_width=True):
         ch, v = get_random_verse()
@@ -259,6 +451,9 @@ with st.sidebar:
         st.session_state.messages = []
         st.rerun()
 
+# ── Inject theme CSS (after sidebar so toggle value is read) ──
+st.markdown(get_theme_css(st.session_state.dark_mode), unsafe_allow_html=True)
+
 # ── Main area ──────────────────────────────────────────────────
 st.markdown("""
 <div class="hero">
@@ -268,7 +463,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Mood acknowledgement pill
-mood_emoji = selected_mood.split()[0]
 st.markdown(
     f'<div class="mood-card"><p>Current mood: {selected_mood}</p></div>',
     unsafe_allow_html=True,
