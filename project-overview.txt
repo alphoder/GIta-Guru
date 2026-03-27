@@ -1,0 +1,541 @@
+================================================================================
+                    DeepRead AI - Project Overview
+            AI-Powered Research & Analysis Agent
+================================================================================
+
+About the Project
+-----------------
+DeepRead AI is a RAG (Retrieval-Augmented Generation) based research and
+analysis agent that lets users upload any book (PDF, EPUB, TXT) or provide
+a website URL, and the system automatically ingests, indexes, and learns
+the content. Once processed, the agent answers any question strictly
+based on the ingested source material — acting as an expert on that specific
+book or website with full knowledge of every detail, chapter, paragraph,
+and data point within it.
+
+The agent does NOT hallucinate or pull from general knowledge. Every answer
+is grounded in the uploaded source, with citations pointing back to exact
+pages, chapters, sections, or URLs where the information was found.
+
+All data is real — no mock data, no seed files, no placeholder content.
+Every piece of content in the system comes from actual user uploads or
+real website crawls.
+
+
+Core Concept
+------------
+Traditional search gives you links. ChatGPT gives you general answers.
+DeepRead AI gives you precise, source-grounded answers from YOUR specific
+documents and websites. Think of it as having a personal research assistant
+who has read and memorized your entire book or website, and can instantly
+answer any question about it with page-level citations.
+
+Use cases:
+  - Upload a textbook → ask questions, get answers with page references
+  - Provide a documentation website → query any API detail instantly
+  - Upload a research paper → extract methodology, findings, comparisons
+  - Provide a competitor's website → analyze their offerings in detail
+  - Upload legal documents → find specific clauses and terms
+  - Provide a blog/news site → summarize and cross-reference articles
+
+
+Tech Stack
+----------
+Frontend:
+  - Next.js 14+ (App Router)
+  - React 18+
+  - TypeScript
+  - Tailwind CSS
+  - shadcn/ui component library
+
+Backend:
+  - Next.js API Routes (Route Handlers)
+  - LangChain.js (RAG orchestration)
+  - Groq SDK (Llama 3.3 70B Versatile — free tier)
+
+Database:
+  - Neon (Serverless PostgreSQL)
+  - pgvector extension (vector embeddings stored directly in Neon)
+  - Drizzle ORM (type-safe database queries)
+
+Authentication:
+  - NextAuth.js v5 (Auth.js)
+  - Google OAuth 2.0 (sole auth provider — no email/password)
+
+File Storage:
+  - Vercel Blob or AWS S3 (uploaded documents)
+
+Document Parsing:
+  - pdf-parse (PDF extraction)
+  - cheerio (HTML/website scraping)
+  - mammoth (DOCX extraction)
+
+Embedding:
+  - OpenAI text-embedding-3-small or HuggingFace via Transformers.js
+
+Deployment:
+  - Vercel (frontend + API routes)
+  - Neon (database — serverless, scales to zero)
+
+
+Project Structure
+-----------------
+deepread-ai/
+├── package.json
+├── next.config.ts
+├── tailwind.config.ts
+├── drizzle.config.ts
+├── .env.local / .env.example
+├── public/
+│   └── assets/                         Static assets (logo, icons)
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx                  Root layout with providers
+│   │   ├── page.tsx                    Landing page
+│   │   ├── globals.css                 Global styles + Tailwind
+│   │   ├── auth/
+│   │   │   ├── signin/page.tsx         Google OAuth sign-in page
+│   │   │   └── callback/page.tsx       OAuth callback handler
+│   │   ├── dashboard/
+│   │   │   ├── page.tsx                User dashboard (source library)
+│   │   │   ├── layout.tsx              Dashboard layout with sidebar
+│   │   │   └── settings/page.tsx       User settings
+│   │   ├── source/
+│   │   │   ├── [id]/page.tsx           Single source view + chat
+│   │   │   └── new/page.tsx            Upload book / add URL
+│   │   └── api/
+│   │       ├── auth/[...nextauth]/
+│   │       │   └── route.ts            NextAuth Google OAuth handler
+│   │       ├── sources/
+│   │       │   ├── route.ts            CRUD for sources (GET, POST)
+│   │       │   └── [id]/
+│   │       │       ├── route.ts        Single source (GET, DELETE)
+│   │       │       └── chat/route.ts   RAG query endpoint (POST)
+│   │       ├── ingest/
+│   │       │   ├── upload/route.ts     File upload + processing
+│   │       │   └── url/route.ts        URL scraping + processing
+│   │       └── webhooks/
+│   │           └── route.ts            Neon/external webhooks
+│   ├── lib/
+│   │   ├── auth.ts                     NextAuth config (Google provider)
+│   │   ├── db/
+│   │   │   ├── index.ts                Neon + Drizzle client
+│   │   │   ├── schema.ts              Drizzle schema (all tables)
+│   │   │   └── migrations/             Drizzle migration files
+│   │   ├── rag/
+│   │   │   ├── chain.ts                RAG orchestration & query engine
+│   │   │   ├── embeddings.ts           Embedding generation
+│   │   │   ├── chunking.ts             Smart text splitting
+│   │   │   ├── citations.ts            Source citation tracking
+│   │   │   └── prompts.ts              System prompts & templates
+│   │   ├── ingest/
+│   │   │   ├── pdf-loader.ts           PDF parsing
+│   │   │   ├── docx-loader.ts          DOCX parsing
+│   │   │   ├── txt-loader.ts           Plain text parsing
+│   │   │   └── web-scraper.ts          Website crawling & extraction
+│   │   ├── storage.ts                  File upload to blob/S3
+│   │   └── utils.ts                    Shared utility functions
+│   ├── components/
+│   │   ├── ui/                         shadcn/ui components
+│   │   ├── chat/
+│   │   │   ├── chat-interface.tsx       Main chat UI
+│   │   │   ├── message-bubble.tsx       Individual message display
+│   │   │   └── citation-card.tsx        Source citation component
+│   │   ├── sources/
+│   │   │   ├── source-card.tsx          Source library card
+│   │   │   ├── upload-form.tsx          File upload component
+│   │   │   └── url-form.tsx             URL input component
+│   │   ├── layout/
+│   │   │   ├── navbar.tsx               Top navigation bar
+│   │   │   ├── sidebar.tsx              Dashboard sidebar
+│   │   │   └── user-menu.tsx            Google profile dropdown
+│   │   └── providers/
+│   │       ├── session-provider.tsx      NextAuth session wrapper
+│   │       └── theme-provider.tsx       Dark/light mode provider
+│   ├── hooks/
+│   │   ├── use-chat.ts                  Chat state & streaming hook
+│   │   └── use-sources.ts              Source CRUD hook
+│   └── types/
+│       └── index.ts                     Shared TypeScript types
+└── drizzle/
+    └── migrations/                      SQL migration files
+
+
+Database Schema (Neon + pgvector)
+---------------------------------
+All tables live in Neon serverless PostgreSQL. No fake/seed data — tables
+are empty until real users sign in and upload real content.
+
+  users
+  ├── id              UUID (primary key)
+  ├── name            TEXT (from Google profile)
+  ├── email           TEXT (unique, from Google)
+  ├── image           TEXT (Google profile picture URL)
+  ├── created_at      TIMESTAMP
+  └── updated_at      TIMESTAMP
+
+  accounts (NextAuth managed — Google OAuth tokens)
+  ├── id              UUID (primary key)
+  ├── user_id         UUID (FK → users)
+  ├── provider        TEXT ("google")
+  ├── provider_account_id  TEXT
+  ├── access_token    TEXT
+  ├── refresh_token   TEXT
+  └── expires_at      INTEGER
+
+  sessions (NextAuth managed)
+  ├── id              UUID (primary key)
+  ├── user_id         UUID (FK → users)
+  ├── session_token   TEXT (unique)
+  └── expires         TIMESTAMP
+
+  sources
+  ├── id              UUID (primary key)
+  ├── user_id         UUID (FK → users)
+  ├── title           TEXT (book title / website name)
+  ├── type            TEXT ("pdf" | "epub" | "txt" | "docx" | "website")
+  ├── url             TEXT (nullable — for websites)
+  ├── file_url        TEXT (nullable — blob storage URL for uploads)
+  ├── file_size       INTEGER (bytes)
+  ├── page_count      INTEGER (nullable)
+  ├── status          TEXT ("processing" | "ready" | "failed")
+  ├── metadata        JSONB (chapters, author, description, etc.)
+  ├── created_at      TIMESTAMP
+  └── updated_at      TIMESTAMP
+
+  chunks
+  ├── id              UUID (primary key)
+  ├── source_id       UUID (FK → sources)
+  ├── content         TEXT (chunk text)
+  ├── embedding       VECTOR(1536) (pgvector — stored in Neon)
+  ├── page_number     INTEGER (nullable)
+  ├── chapter         TEXT (nullable)
+  ├── section         TEXT (nullable)
+  ├── chunk_index     INTEGER (order within source)
+  ├── url             TEXT (nullable — specific page URL for websites)
+  └── metadata        JSONB (additional structural info)
+
+  conversations
+  ├── id              UUID (primary key)
+  ├── user_id         UUID (FK → users)
+  ├── source_id       UUID (FK → sources)
+  ├── title           TEXT (auto-generated from first message)
+  └── created_at      TIMESTAMP
+
+  messages
+  ├── id              UUID (primary key)
+  ├── conversation_id UUID (FK → conversations)
+  ├── role            TEXT ("user" | "assistant")
+  ├── content         TEXT
+  ├── citations       JSONB (array of {chunk_id, page, chapter, url})
+  └── created_at      TIMESTAMP
+
+Vector search is done via pgvector's cosine similarity operator (<=>)
+directly in Neon — no separate vector database needed.
+
+
+Authentication Flow (Google OAuth)
+-----------------------------------
+DeepRead AI uses Google OAuth as the ONLY authentication method.
+No email/password, no magic links, no other social providers.
+
+  1. User clicks "Sign in with Google" on landing page
+  2. Redirected to Google OAuth consent screen
+  3. Google returns auth code to /api/auth/callback/google
+  4. NextAuth exchanges code for tokens, creates/updates user in Neon
+  5. Session cookie set, user redirected to /dashboard
+  6. All API routes protected — check session before processing
+  7. Each user can only access their own sources and conversations
+
+Environment variables required:
+  GOOGLE_CLIENT_ID=...
+  GOOGLE_CLIENT_SECRET=...
+  NEXTAUTH_SECRET=...
+  NEXTAUTH_URL=http://localhost:3000
+
+
+Key Features
+------------
+
+1. Book Upload & Ingestion
+   Users upload PDF, EPUB, TXT, or DOCX files through a drag-and-drop UI.
+   The system automatically:
+   - Uploads file to blob storage (Vercel Blob / S3)
+   - Extracts text with structural metadata (chapters, pages, sections)
+   - Splits into optimal chunks with overlap for context continuity
+   - Generates vector embeddings and stores in Neon (pgvector)
+   - Shows real-time processing status (processing → ready)
+   - All content comes from the actual uploaded file — zero fake data
+
+2. Website URL Ingestion
+   Users paste a URL and the system:
+   - Crawls the website (configurable depth: single page or full domain)
+   - Extracts meaningful content, stripping navigation, ads, boilerplate
+   - Indexes all pages with their URLs, titles, and structural metadata
+   - Stores everything in Neon with pgvector embeddings
+   - Supports re-crawling to pick up updated content
+
+3. Source-Grounded Q&A
+   Every answer is strictly based on the ingested content:
+   - No hallucination — if the answer isn't in the source, the agent says so
+   - Citations included with every response (page, chapter, section, URL)
+   - Streaming responses via Vercel AI SDK
+   - Conversation history persisted in Neon per user
+   - Can compare across multiple ingested sources
+
+4. Per-User Knowledge Base
+   Each user has their own isolated library:
+   - Google sign-in creates a personal workspace
+   - All sources, conversations, and history are private
+   - Dashboard shows all uploaded books and websites
+   - Source management: view status, delete, re-index
+
+5. Smart Chunking & Retrieval
+   - Recursive text splitting respecting paragraph/section boundaries
+   - Configurable chunk size (default 1000 chars) and overlap (200 chars)
+   - pgvector cosine similarity search directly in Neon
+   - Top-K retrieval with diversity filtering
+
+6. Analysis & Summarization
+   - Full book/website summary generation
+   - Chapter-by-chapter breakdown
+   - Key themes and concept extraction
+   - Entity extraction (people, places, organizations)
+   - Comparison across multiple sources
+
+7. Modern UI
+   - Clean, responsive Next.js interface with Tailwind + shadcn/ui
+   - Dark / light mode toggle
+   - Real-time streaming chat responses
+   - Drag-and-drop file upload
+   - Mobile-friendly responsive design
+
+8. Export
+   - Export Q&A sessions as PDF or Markdown
+   - Export analysis reports
+
+
+Architecture & Data Flow
+------------------------
+
+--- Ingestion Pipeline ---
+
+  Book Upload / URL Input (Next.js frontend)
+        ↓
+  API Route: /api/ingest/upload or /api/ingest/url
+        ↓
+  Content Extraction
+  (pdf-parse / cheerio scraper / mammoth)
+        ↓
+  Preprocessing & Cleaning
+  (Strip noise, normalize text, extract metadata)
+        ↓
+  Smart Chunking
+  (Recursive splitting with overlap, respecting structure)
+        ↓
+  Embedding Generation
+  (OpenAI text-embedding-3-small or HuggingFace)
+        ↓
+  Neon PostgreSQL Storage
+  (chunks table with pgvector embeddings + metadata)
+        ↓
+  Source status updated to "ready"
+
+
+--- Query Pipeline ---
+
+  User Question (chat-interface.tsx)
+        ↓
+  API Route: /api/sources/[id]/chat (POST)
+        ↓
+  Query Embedding
+  (Same model used for ingestion)
+        ↓
+  pgvector Cosine Similarity Search
+  (SELECT ... ORDER BY embedding <=> query_embedding LIMIT K)
+        ↓
+  Source Filtering
+  (Scoped to user's source, filtered by user_id)
+        ↓
+  Prompt Construction
+  (System prompt + retrieved chunks + question + history)
+        ↓
+  LLM Call
+  (Groq Llama 3.3 70B, temperature 0.2, streamed response)
+        ↓
+  Citation Extraction
+  (Map answer back to chunk metadata: page, chapter, URL)
+        ↓
+  Streaming Response
+  (Vercel AI SDK streaming to frontend)
+        ↓
+  Message + Citations saved to Neon
+
+
+Core Modules
+------------
+
+src/app/                — Next.js App Router pages
+  Landing page, Google sign-in, dashboard, source viewer + chat,
+  upload/URL forms. All pages server-rendered or client components
+  as appropriate. Protected routes redirect unauthenticated users.
+
+src/lib/auth.ts         — NextAuth v5 configuration
+  Google OAuth provider only. Adapter connected to Neon via Drizzle.
+  Session strategy: JWT. Callbacks for session enrichment.
+
+src/lib/db/schema.ts    — Drizzle ORM schema
+  All tables defined in TypeScript: users, accounts, sessions,
+  sources, chunks (with pgvector column), conversations, messages.
+  Migrations auto-generated via drizzle-kit.
+
+src/lib/db/index.ts     — Neon database client
+  Neon serverless driver + Drizzle ORM instance. Connection pooling
+  via Neon's HTTP driver for edge compatibility.
+
+src/lib/rag/chain.ts    — RAG orchestration
+  querySources() function: embeds question, searches pgvector,
+  builds prompt, calls Groq, extracts citations, saves message.
+  Returns streamed response with citation metadata.
+
+src/lib/rag/prompts.ts  — System prompts
+  Enforces source-only answers. Instructions to cite page/chapter/URL.
+  Says "not found in sources" when answer unavailable. Never fabricates.
+
+src/lib/rag/embeddings.ts — Embedding generation
+  Wraps embedding model. Same model used for both ingestion and query
+  to ensure vector space consistency.
+
+src/lib/rag/chunking.ts — Text splitting
+  Recursive character splitter respecting paragraphs and sections.
+  Returns chunks with positional metadata (page, chapter, index).
+
+src/lib/ingest/pdf-loader.ts — PDF extraction via pdf-parse
+src/lib/ingest/web-scraper.ts — Website crawling via cheerio
+src/lib/ingest/docx-loader.ts — DOCX extraction via mammoth
+src/lib/ingest/txt-loader.ts — Plain text parsing
+
+src/components/chat/    — Chat UI components
+  Streaming message display, citation cards with source links,
+  message input with keyboard shortcuts.
+
+src/components/sources/ — Source management components
+  Upload dropzone, URL input form, source library grid/list view,
+  processing status indicators.
+
+
+Supported Input Formats
+-----------------------
+Books & Documents:
+  - PDF (.pdf) — page number preservation
+  - EPUB (.epub) — chapter structure (future)
+  - Plain Text (.txt) — paragraph tracking
+  - Word Documents (.docx) — heading structure
+  - (Future: .mobi, .rtf, scanned PDFs via OCR)
+
+Websites:
+  - Static HTML pages
+  - Server-rendered sites
+  - Documentation sites
+  - Blogs and news sites (handles pagination)
+  - (Future: JS-rendered SPAs via Puppeteer, authenticated pages)
+
+
+Query Capabilities
+------------------
+The agent handles these question types, always grounded in source:
+
+  Factual:       "What does chapter 5 say about X?"
+  Analytical:    "What are the main arguments the author makes about Y?"
+  Comparative:   "How does Source A's position differ from Source B?"
+  Summarization: "Summarize the key points of section 3."
+  Extraction:    "List all statistics mentioned in the document."
+  Structural:    "What is the table of contents / site structure?"
+  Definitional:  "How does the author define Z?"
+  Contextual:    "What evidence does the author provide for claim W?"
+
+If a question cannot be answered from the source material, the agent
+explicitly states: "This information is not available in the provided
+sources." — it never guesses or fills in from general knowledge.
+
+
+Environment Variables
+---------------------
+  # Database
+  DATABASE_URL=postgresql://...@ep-xxx.us-east-2.aws.neon.tech/deepread
+
+  # Auth
+  GOOGLE_CLIENT_ID=xxx.apps.googleusercontent.com
+  GOOGLE_CLIENT_SECRET=xxx
+  NEXTAUTH_SECRET=xxx
+  NEXTAUTH_URL=http://localhost:3000
+
+  # LLM
+  GROQ_API_KEY=gsk_xxx
+
+  # File Storage
+  BLOB_READ_WRITE_TOKEN=xxx  (Vercel Blob)
+
+  # Embeddings (if using OpenAI)
+  OPENAI_API_KEY=sk-xxx
+
+
+How to Run
+----------
+  npx create-next-app@latest deepread-ai --typescript --tailwind --app
+  cd deepread-ai
+  npm install drizzle-orm @neondatabase/serverless next-auth@beta
+  npm install @langchain/groq @langchain/core pdf-parse cheerio mammoth
+  npm install @vercel/blob ai
+
+  # Set up .env.local with all environment variables above
+  # Set up Google OAuth credentials in Google Cloud Console
+  # Create Neon project and enable pgvector extension
+
+  npx drizzle-kit push          # Push schema to Neon
+  npm run dev                   # Start development server
+
+Usage:
+  1. Open http://localhost:3000
+  2. Sign in with Google
+  3. Upload a book or paste a website URL
+  4. Wait for ingestion (real-time status shown)
+  5. Chat with your source — every answer cites the original
+  6. Manage sources from the dashboard
+
+
+Data Policy
+-----------
+  - ZERO fake data — no seed files, no mock content, no placeholders
+  - All content originates from real user uploads or real website crawls
+  - Each user's data is isolated — no cross-user access
+  - Sources can be permanently deleted (removes file + all chunks + vectors)
+  - Google profile data (name, email, avatar) stored for auth only
+
+
+Evolution
+---------
+This project evolved from "MindGita", a Bhagavad Gita wellness companion:
+  - Python/Streamlit → Next.js/React/TypeScript
+  - ChromaDB → Neon PostgreSQL + pgvector
+  - No auth → Google OAuth via NextAuth.js
+  - Single hardcoded book → any book or website upload
+  - Fake JSON data files → real user-uploaded content only
+  - Session-only state → persistent per-user database
+  - Therapeutic persona → neutral research analyst
+
+
+Future Scope
+------------
+- OCR for scanned PDFs and images (Tesseract.js)
+- Audio/video transcription ingestion (YouTube, podcasts)
+- Team workspaces with shared knowledge bases
+- Real-time collaborative annotations
+- Scheduled website re-crawling for updated content
+- Browser extension for one-click page ingestion
+- Mobile app (React Native)
+- Advanced analytics (word frequency, sentiment, readability scores)
+- Integration with Notion, Obsidian, Google Drive
+- Stripe billing for premium tiers (larger uploads, more sources)
+
+================================================================================
