@@ -17,7 +17,9 @@ export async function parsePdf(buffer: Buffer): Promise<{
   pageCount: number;
   metadata: Record<string, unknown>;
 }> {
-  const data = await pdf(buffer);
+  // max: 20 tells pdf-parse/PDF.js to stop after 20 pages — it won't
+  // load the rest of the document into memory at all.
+  const data = await pdf(buffer, { max: 20 });
 
   // pdf-parse gives us the full text. We split by form feeds if available,
   // otherwise treat the entire content as one "page" per ~3000 chars.

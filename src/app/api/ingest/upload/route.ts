@@ -12,12 +12,10 @@ import { eq } from "drizzle-orm";
 export const maxDuration = 60;
 export const runtime = "nodejs";
 
-// PDF.js (used by pdf-parse) expands PDFs ~10-50x in memory.
-// Keep PDF limit low to stay within Vercel's 1GB serverless limit.
-const PDF_SIZE_LIMIT = 2 * 1024 * 1024; // 2 MB
+const PDF_SIZE_LIMIT = 10 * 1024 * 1024; // 10 MB
 const OTHER_SIZE_LIMIT = 10 * 1024 * 1024; // 10 MB
 const MAX_CHUNKS = 100;
-const MAX_PDF_PAGES = 30;
+const MAX_PDF_PAGES = 20; // pdf-parse stops loading at this page (saves memory)
 
 export async function POST(request: Request) {
   const session = await auth();
@@ -60,9 +58,8 @@ export async function POST(request: Request) {
     // Per-type size limits
     const sizeLimit = type === "pdf" ? PDF_SIZE_LIMIT : OTHER_SIZE_LIMIT;
     if (file.size > sizeLimit) {
-      const limitMB = sizeLimit / 1024 / 1024;
       return NextResponse.json(
-        { error: `PDF files must be under ${limitMB}MB. For larger books, use a TXT or DOCX export.` },
+        { error: "File must be under 10MB." },
         { status: 400 }
       );
     }
