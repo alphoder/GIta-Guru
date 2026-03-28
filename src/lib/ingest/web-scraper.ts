@@ -1,4 +1,5 @@
 import * as cheerio from "cheerio";
+import { ApifyClient } from "apify-client";
 
 export interface ScrapedPage {
   title: string;
@@ -7,6 +8,45 @@ export interface ScrapedPage {
 }
 
 export async function scrapeUrl(url: string): Promise<ScrapedPage> {
+  // Use Apify if API token is set, otherwise fall back to basic fetch
+  if (process.env.APIFY_API_TOKEN) {
+    return scrapeWithApify(url);
+  }
+  return scrapeWithFetch(url);
+}
+
+// ─── Apify Scraper (recommended) ───
+
+async function scrapeWithApify(url: string): Promise<ScrapedPage> {
+  const client = new ApifyClient({ token: process.env.APIFY_API_TOKEN });
+
+  // Use Apify's Website Content Crawler
+  const run = await client.actor("apify/website-content-crawler").call({
+    startUrls: [{ url }],
+    maxCrawlPages: 1,
+    crawlerType: "cheerio",
+    maxCrawlDepth: 0,
+  });
+
+  // Get results from the dataset
+  const { items } = await client.dataset(run.defaultDatasetId).listItems();
+
+  if (!items || items.length === 0) {
+    throw new Error("Apify returned no results for this URL");
+  }
+
+  const item = items[0] as Record<string, unknown>;
+  const content = (item.text as string) || (item.markdown as string) || "";
+  const title = (item.metadata as Record<string, string>)?.title
+    || (item.title as string)
+    || new URL(url).hostname;
+
+  return { title, content, url };
+}
+
+// ─── Basic Fetch Scraper (fallback) ───
+
+async function scrapeWithFetch(url: string): Promise<ScrapedPage> {
   const res = await fetch(url, {
     headers: {
       "User-Agent":
@@ -72,8 +112,6 @@ export async function scrapeUrl(url: string): Promise<ScrapedPage> {
 }
 
 function extractText($: cheerio.CheerioAPI, el: ReturnType<typeof $>): string {
-  // Get text with better whitespace handling
-  // Replace block-level elements with newlines
   el.find("p, div, br, h1, h2, h3, h4, h5, h6, li, tr, blockquote, pre").each((_, elem) => {
     $(elem).prepend("\n");
     $(elem).append("\n");
@@ -81,14 +119,12 @@ function extractText($: cheerio.CheerioAPI, el: ReturnType<typeof $>): string {
 
   let text = el.text();
 
-  // Clean up whitespace
   text = text
     .split("\n")
     .map((line) => line.replace(/\s+/g, " ").trim())
     .filter((line) => line.length > 0)
     .join("\n");
 
-  // Remove excessive newlines
   text = text.replace(/\n{3,}/g, "\n\n");
 
   return text.trim();
