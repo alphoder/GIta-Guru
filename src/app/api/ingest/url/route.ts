@@ -55,13 +55,13 @@ export async function POST(request: Request) {
     // Process inline (Vercel kills background tasks)
     const scraped = await scrapeUrl(url);
 
-    if (!scraped.content || scraped.content.length < 50) {
+    if (!scraped.content || scraped.content.length < 20) {
       await db
         .update(sources)
         .set({ status: "failed" })
         .where(eq(sources.id, sourceId));
       return NextResponse.json(
-        { error: "Could not extract enough content from the URL" },
+        { error: `Extracted only ${scraped.content?.length || 0} characters. The site may be blocking scraping or using JavaScript rendering.` },
         { status: 400 }
       );
     }
