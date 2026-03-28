@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { sources, chunks } from "@/lib/db/schema";
-import { scrapeUrl } from "@/lib/ingest/web-scraper";
+import { scrapeUrl, ScrapeError } from "@/lib/ingest/web-scraper";
 import { chunkText } from "@/lib/rag/chunking";
 import { generateEmbeddings } from "@/lib/rag/embeddings";
 import { eq } from "drizzle-orm";
@@ -110,6 +110,11 @@ export async function POST(request: Request) {
         .set({ status: "failed" })
         .where(eq(sources.id, sourceId))
         .catch(() => {});
+    }
+
+    // Return user-friendly error from ScrapeError
+    if (err instanceof ScrapeError) {
+      return NextResponse.json({ error: err.reason }, { status: 400 });
     }
 
     return NextResponse.json(
