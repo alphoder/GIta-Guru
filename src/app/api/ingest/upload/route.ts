@@ -12,6 +12,13 @@ import { eq } from "drizzle-orm";
 export const maxDuration = 60;
 export const runtime = "nodejs";
 
+// PDF.js (used by pdf-parse) expands PDFs ~10-50x in memory.
+// Keep PDF limit low to stay within Vercel's 1GB serverless limit.
+const PDF_SIZE_LIMIT = 2 * 1024 * 1024; // 2 MB
+const OTHER_SIZE_LIMIT = 10 * 1024 * 1024; // 10 MB
+const MAX_CHUNKS = 100;
+const MAX_PDF_PAGES = 30;
+
 export async function POST(request: Request) {
   const session = await auth();
   if (!session?.user?.id) {
@@ -28,20 +35,13 @@ export async function POST(request: Request) {
       file = formData.get("file") as File | null;
     } catch {
       return NextResponse.json(
-        { error: "Could not read file. Make sure it is under 10MB." },
+        { error: "Could not read file. Make sure it is under the size limit." },
         { status: 400 }
       );
     }
 
     if (!file) {
       return NextResponse.json({ error: "No file provided" }, { status: 400 });
-    }
-
-    if (file.size > 10 * 1024 * 1024) {
-      return NextResponse.json(
-        { error: "File must be under 10MB" },
-        { status: 400 }
-      );
     }
 
     // Determine file type
@@ -57,8 +57,18 @@ export async function POST(request: Request) {
       );
     }
 
+    // Per-type size limits
+    const sizeLimit = type === "pdf" ? PDF_SIZE_LIMIT : OTHER_SIZE_LIMIT;
+    if (file.size > sizeLimit) {
+      const limitMB = sizeLimit / 1024 / 1024;
+      return NextResponse.json(
+        { error: `PDF files must be under ${limitMB}MB. For larger books, use a TXT or DOCX export.` },
+        { status: 400 }
+      );
+    }
+
     // Read file into buffer
-    const buffer = Buffer.from(await file.arrayBuffer());
+    let buffer: Buffer | null = Buffer.from(await file.arrayBuffer());
 
     // Create source record
     const [source] = await db
@@ -74,36 +84,32 @@ export async function POST(request: Request) {
 
     sourceId = source.id;
 
-    // Parse file
+    // Parse file and collect chunks
     let allChunks: ReturnType<typeof chunkText> = [];
     let pageCount: number | null = null;
     let metadata: Record<string, unknown> = {};
-
-    const MAX_CHUNKS = 150;
 
     if (type === "pdf") {
       const parsed = await parsePdf(buffer);
       pageCount = parsed.pageCount;
       metadata = parsed.metadata;
-      // Limit to first 40 pages to avoid OOM on large PDFs
-      const pages = parsed.pages.slice(0, 40);
-      for (const page of pages) {
+      // Release buffer immediately after parsing
+      buffer = null;
+      for (const page of parsed.pages.slice(0, MAX_PDF_PAGES)) {
         if (allChunks.length >= MAX_CHUNKS) break;
-        const pageChunks = chunkText(page.content, {
-          pageNumber: page.pageNumber,
-        });
-        allChunks.push(...pageChunks);
+        allChunks.push(...chunkText(page.content, { pageNumber: page.pageNumber }));
       }
     } else if (type === "txt") {
       const text = buffer.toString("utf-8");
+      buffer = null;
       const parsed = parseTxt(text);
       for (const section of parsed.sections) {
         if (allChunks.length >= MAX_CHUNKS) break;
-        const sectionChunks = chunkText(section.content);
-        allChunks.push(...sectionChunks);
+        allChunks.push(...chunkText(section.content));
       }
     } else if (type === "docx") {
       const parsed = await parseDocx(buffer);
+      buffer = null;
       metadata = parsed.metadata;
       allChunks = chunkText(parsed.text);
     }
@@ -119,10 +125,10 @@ export async function POST(request: Request) {
       );
     }
 
-    // Re-index and limit chunks
+    // Re-index and cap
     allChunks = allChunks.slice(0, MAX_CHUNKS).map((c, i) => ({ ...c, index: i }));
 
-    // 3 parallel workers for embedding + insertion
+    // Embed and insert in small sequential batches (avoids holding all vectors in memory)
     await parallelIngest(sourceId, allChunks);
 
     // Update source to ready
