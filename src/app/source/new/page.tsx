@@ -65,8 +65,8 @@ export default function NewSourcePage() {
       setError("Only PDF, TXT, and DOCX files are supported.");
       return;
     }
-    if (f.size > 50 * 1024 * 1024) {
-      setError("File must be under 50MB.");
+    if (f.size > 10 * 1024 * 1024) {
+      setError("File must be under 10MB.");
       return;
     }
     setError(null);
@@ -78,11 +78,22 @@ export default function NewSourcePage() {
     setLoading(true);
     setError(null);
     try {
-      const formData = new FormData();
-      formData.append("file", file);
+      // Send as base64 JSON to avoid Vercel FormData/multipart issues
+      const arrayBuffer = await file.arrayBuffer();
+      const base64 = btoa(
+        new Uint8Array(arrayBuffer).reduce(
+          (data, byte) => data + String.fromCharCode(byte),
+          ""
+        )
+      );
       const res = await fetch("/api/ingest/upload", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fileName: file.name,
+          fileSize: file.size,
+          fileData: base64,
+        }),
       });
       if (!res.ok) {
         const contentType = res.headers.get("content-type") || "";
@@ -220,7 +231,7 @@ export default function NewSourcePage() {
                   Drag and drop your file here
                 </p>
                 <p className="mb-4 text-xs text-neutral-500">
-                  PDF, DOCX, or TXT — up to 50MB
+                  PDF, DOCX, or TXT — up to 10MB
                 </p>
                 <label className="cursor-pointer">
                   <span className="inline-flex items-center justify-center gap-2 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-xs font-medium transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-800">

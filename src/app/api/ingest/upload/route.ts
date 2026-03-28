@@ -9,9 +9,9 @@ import { chunkText } from "@/lib/rag/chunking";
 import { generateEmbeddings } from "@/lib/rag/embeddings";
 import { eq } from "drizzle-orm";
 
-// Allow up to 60s for file processing on Vercel
 export const maxDuration = 60;
 
+// Limit body size to 10MB
 export async function POST(request: Request) {
   const session = await auth();
   if (!session?.user?.id) {
@@ -21,15 +21,26 @@ export async function POST(request: Request) {
   let sourceId: string | null = null;
 
   try {
-    const formData = await request.formData();
-    const file = formData.get("file") as File | null;
+    const body = await request.json();
+    const { fileName, fileSize, fileData } = body;
 
-    if (!file) {
-      return NextResponse.json({ error: "No file provided" }, { status: 400 });
+    if (!fileName || !fileData) {
+      return NextResponse.json(
+        { error: "File name and data are required" },
+        { status: 400 }
+      );
+    }
+
+    // Check file size (10MB limit for Vercel)
+    if (fileSize > 10 * 1024 * 1024) {
+      return NextResponse.json(
+        { error: "File must be under 10MB" },
+        { status: 400 }
+      );
     }
 
     // Determine file type
-    const name = file.name.toLowerCase();
+    const name = fileName.toLowerCase();
     let type: "pdf" | "txt" | "docx";
     if (name.endsWith(".pdf")) type = "pdf";
     else if (name.endsWith(".txt")) type = "txt";
@@ -41,22 +52,24 @@ export async function POST(request: Request) {
       );
     }
 
-    // Create source record (processing state)
+    // Decode base64 to buffer
+    const buffer = Buffer.from(fileData, "base64");
+
+    // Create source record
     const [source] = await db
       .insert(sources)
       .values({
         userId: session.user.id,
-        title: file.name.replace(/\.[^/.]+$/, ""),
+        title: fileName.replace(/\.[^/.]+$/, ""),
         type,
-        fileSize: file.size,
+        fileSize: buffer.length,
         status: "processing",
       })
       .returning({ id: sources.id });
 
     sourceId = source.id;
 
-    // Process file inline (Vercel kills background tasks)
-    const buffer = Buffer.from(await file.arrayBuffer());
+    // Parse file
     let allChunks: ReturnType<typeof chunkText> = [];
     let pageCount: number | null = null;
     let metadata: Record<string, unknown> = {};
@@ -95,11 +108,11 @@ export async function POST(request: Request) {
       );
     }
 
-    // Re-index chunks
-    allChunks = allChunks.map((c, i) => ({ ...c, index: i }));
+    // Re-index and limit chunks to prevent OOM
+    allChunks = allChunks.slice(0, 200).map((c, i) => ({ ...c, index: i }));
 
-    // Generate embeddings in batches of 50
-    const batchSize = 50;
+    // Generate embeddings in small batches to avoid OOM
+    const batchSize = 10;
     for (let i = 0; i < allChunks.length; i += batchSize) {
       const batch = allChunks.slice(i, i + batchSize);
       const texts = batch.map((c) => c.content);
@@ -134,7 +147,6 @@ export async function POST(request: Request) {
   } catch (err) {
     console.error("Upload error:", err);
 
-    // Mark as failed if source was created
     if (sourceId) {
       await db
         .update(sources)
