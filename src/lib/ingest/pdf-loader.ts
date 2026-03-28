@@ -1,5 +1,7 @@
+// Import the lib directly to avoid pdf-parse/index.js which tries to
+// read a test PDF file on import (breaks on Vercel serverless)
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const pdf = require("pdf-parse") as (buffer: Buffer) => Promise<{
+const pdf = require("pdf-parse/lib/pdf-parse.js") as (buffer: Buffer) => Promise<{
   text: string;
   numpages: number;
   info: Record<string, string>;
