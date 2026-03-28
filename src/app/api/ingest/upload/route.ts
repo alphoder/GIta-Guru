@@ -79,11 +79,16 @@ export async function POST(request: Request) {
     let pageCount: number | null = null;
     let metadata: Record<string, unknown> = {};
 
+    const MAX_CHUNKS = 150;
+
     if (type === "pdf") {
       const parsed = await parsePdf(buffer);
       pageCount = parsed.pageCount;
       metadata = parsed.metadata;
-      for (const page of parsed.pages) {
+      // Limit to first 40 pages to avoid OOM on large PDFs
+      const pages = parsed.pages.slice(0, 40);
+      for (const page of pages) {
+        if (allChunks.length >= MAX_CHUNKS) break;
         const pageChunks = chunkText(page.content, {
           pageNumber: page.pageNumber,
         });
@@ -93,6 +98,7 @@ export async function POST(request: Request) {
       const text = buffer.toString("utf-8");
       const parsed = parseTxt(text);
       for (const section of parsed.sections) {
+        if (allChunks.length >= MAX_CHUNKS) break;
         const sectionChunks = chunkText(section.content);
         allChunks.push(...sectionChunks);
       }
@@ -114,7 +120,7 @@ export async function POST(request: Request) {
     }
 
     // Re-index and limit chunks
-    allChunks = allChunks.slice(0, 300).map((c, i) => ({ ...c, index: i }));
+    allChunks = allChunks.slice(0, MAX_CHUNKS).map((c, i) => ({ ...c, index: i }));
 
     // 3 parallel workers for embedding + insertion
     await parallelIngest(sourceId, allChunks);
