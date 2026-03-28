@@ -106,7 +106,7 @@ export async function POST(request: Request) {
       const embeddings = await generateEmbeddings(texts);
 
       const values = batch.map((chunk, j) => ({
-        sourceId,
+        sourceId: sourceId!,
         content: chunk.content,
         embedding: embeddings[j],
         pageNumber: chunk.pageNumber,
