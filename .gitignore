@@ -45,3 +45,7 @@ next-env.d.ts
 
 # Claude Code
 .claude/
+
+# Internal planning docs (kept locally, off GitHub)
+/docs/
+/.claude/
